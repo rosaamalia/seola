@@ -3,6 +3,7 @@ import './style/styles.css';
 import CarouselLanding from '../components/CarouselLanding/CarouselLanding';
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
+import CardKelas from "../components/CardKelas/CardKelas"
 
 const Section = styled.div`
     display: flex;
