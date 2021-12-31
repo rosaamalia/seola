@@ -1,0 +1,47 @@
+.card {
+    width: 20rem;
+    height: 25rem;
+    padding-top: 1.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.image {
+    width: 35%;
+    border-radius: 10%;
+}
+
+.nama {
+    font-size: large;
+    font-weight: 700;
+}
+
+.deskripsi {
+    text-align: justify;
+}
+
+.deskripsi-pendek {
+    display: none;
+}
+
+@media (max-width: 925px) {
+    .card {
+        height: 20rem;
+    }
+
+    .nama {
+        font-size: medium;
+    }
+
+    .deskripsi {
+        display: none;
+    }
+
+    .deskripsi-pendek {
+        display: block;
+        font-size: small;
+    }
+}
