@@ -1,0 +1,70 @@
+.row-kelas {
+  padding-inline: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card-container {
+  position: relative;
+  width: 17rem;
+  height: 17rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ikon {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  z-index: 100;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  background-color: white;
+  border-radius: 10%;
+  box-shadow: 2px 2px 5px 1px #74727259;
+  transform: rotate(15deg);
+}
+
+.card-kelas {
+  width: 13rem;
+  height: 13rem;
+  margin: 0;
+  text-align: left;
+  padding: 1rem;
+  color: white;
+}
+
+.card-kelas h5 {
+  text-align: left;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.card-kelas p {
+  font-size: small;
+}
+
+.card-title-lukis {
+  color: #000;
+}
+
+.card-text-lukis {
+  color: #000;
+}
+
+.card-title-tari {
+  color: #000;
+}
+
+.card-text-tari {
+  color: #000;
+}
+
+@media (max-width: 925px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+}
