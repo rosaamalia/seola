@@ -5,7 +5,7 @@ import GambarRegis from "../gambar section 1/gambar";
 
 function FormRegis() {
     return (
-            <Container style={{marginTop: 100}}>
+            <Container style={{marginTop: 130 ,marginBottom: 50}}>
                 <Row>
                     <Col md={6} sm={12}>
                         <GambarRegis/>

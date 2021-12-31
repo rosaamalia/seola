@@ -3,7 +3,7 @@ import React from "react";
 function HappyIcon() {
   return (
     <svg
-      style={{marginTop: 10}}
+      style={{marginBottom: 10}}
       xmlns="http://www.w3.org/2000/svg"
       width="500"
       height="400"
