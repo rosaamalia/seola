@@ -1,0 +1,30 @@
+.navbar {
+    background-color: #242A55;
+}
+
+.logo {
+    font-family: 'Krona One', sans-serif;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+    margin-right: 3rem;
+}
+
+.logo:hover {
+    color: #cdd0eb;
+}
+
+.link {
+    margin: 0.5rem 1.5rem 0.5rem 0;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.link:hover {
+    color: white;
+}
+
+.arrow {
+    margin: auto 0 0.1rem 0.5rem;
+}
