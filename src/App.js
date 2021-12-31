@@ -1,9 +1,8 @@
-import RegisterPage from "./Pages/login regis/Register"
+import MainRouter from "./routes/MainRouter";
 
 function App() {
   return (
-    <RegisterPage/>
-   
+    <MainRouter></MainRouter>
   );
 }
 
