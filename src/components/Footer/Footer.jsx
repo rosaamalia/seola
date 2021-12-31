@@ -13,6 +13,7 @@ function Footer(){
                 <Row className="row-column">
                     <Col className="col-margin-left">
                         <Link to="/" className="logo-footer">Seola</Link>
+                        <p className="subtitel">Serrum Online Learning</p>
                         <p>4, RT.4/RW.4, Jagakarsa, South Jakarta City, Jakarta 12620</p>
                     </Col>
                     <Col className="col-margin-right">

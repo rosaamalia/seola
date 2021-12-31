@@ -31,6 +31,10 @@
     color: #cdd0eb;
 }
 
+.subtitel {
+    font-family: 'Krona One', sans-serif;
+}
+
 .judul {
     font-weight: 700;
     margin: 0.5rem 0;
