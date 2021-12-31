@@ -3,9 +3,10 @@ import React from "react";
 function HelloIcon() {
   return (
     <svg
+      style={{marginTop: 30}}
       xmlns="http://www.w3.org/2000/svg"
-      width="300"
-      height="400"
+      width="350"
+      height="450"
       data-name="Layer 1"
       viewBox="0 0 979.327 424.837"
     >
