@@ -10,24 +10,24 @@ function FormRegis() {
                     <Col md={6} sm={12} className="happy">
                         <GambarRegis/>
                     </Col>
-                    <Col md={6} sm={12}>
-                        <h3 className="text-md-center text-sm-center">Hello Student</h3>
+                    <Col md={6} sm={12} xs={8}>
+                        <h3 style={{fontWeight: "bold"}}className="text-md-center text-sm-center">Hello Student</h3>
                         <h5 className="text-md-center text-sm-center">Daftar Akun Remedial</h5>
                         <br/>
                         <Form>
-                            <Form.Control style={{width:400, marginLeft:70, marginRight:50, borderRadius: 30, textAlign: "center"}}  size="text" placeholder="Nama Lengkap" />
+                            <Form.Control style={{maxWidth:400, marginLeft:70, marginRight:50, borderRadius: 30, textAlign: "center"}}  size="text" placeholder="Nama Lengkap" />
                             <br/>
-                            <Form.Control style={{width:400, marginLeft:70, marginRight:50, borderRadius: 30, textAlign: "center" }} size="text" type="email" placeholder="Email" />
+                            <Form.Control style={{maxWidth:400, marginLeft:70, marginRight:50, borderRadius: 30, textAlign: "center" }} size="text" type="email" placeholder="Email" />
                             <br/>
-                            <Form.Control style={{width:400, marginLeft:70, marginRight:50, borderRadius: 30, textAlign: "center"}} size="text" type="password" placeholder="Password" />
+                            <Form.Control style={{maxWidth:400, marginLeft:70, marginRight:50, borderRadius: 30, textAlign: "center"}} size="text" type="password" placeholder="Password" />
                             <br/>
-                            <Form.Control style={{width:400, marginLeft:70, marginRight:50, borderRadius: 30, textAlign: "center"}} size="text" type="password" placeholder="Konfirmasi Password" />
+                            <Form.Control style={{maxWidth:400, marginLeft:70, marginRight:50, borderRadius: 30, textAlign: "center"}} size="text" type="password" placeholder="Konfirmasi Password" />
                             <br/> 
                             <Dropdown>
                                 <Dropdown.Toggle id="dropdown-autoclose-true" variant="warning" style={{width:400, marginLeft:70, marginRight:50, borderRadius: 30, textAlign: "center"}}>
                                 Pilih Bidangmu
                                 </Dropdown.Toggle>
-                                <Dropdown.Menu variant="dark">
+                                <Dropdown.Menu>
                                 <Dropdown.Item href="#/action-1">
                                     Musik
                                 </Dropdown.Item>
@@ -39,7 +39,7 @@ function FormRegis() {
                             <Form.Check style={{marginLeft:70, marginRight:50}} type="checkbox" label="Saya setuju dengan ketentuan dan syarat" />
                         </Form>
                             <br/>
-                        <Button variant="secondary" style={{width:100 ,marginLeft:210, marginRight:210, borderRadius : 30, textAlign: "center"}} type="submit">Submit</Button>
+                        <Button variant="secondary" style={{maxWidth:100 ,marginLeft:210, marginRight:210, borderRadius : 30, textAlign: "center"}} type="submit">Submit</Button>
                     </Col>
                 </Row>
             </Container>

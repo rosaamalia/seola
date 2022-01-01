@@ -1,8 +1,9 @@
 import React from "react";
+import "./style.css";
 import { Container, Row ,Col, Button } from "react-bootstrap";
-import section1 from "../images/section1.png"
+import Section1 from "./gambar/section1"
 import { BsFillAwardFill, BsFillBookFill } from "react-icons/bs";
-import { HeadingRise, Desc, Best, DescBest } from "../styles/landingsection1";
+import { HeadingRise, Desc, Best, DescBest, ButtonGet, ButtonLearn } from "../../styles/landingsection1";
 
 
 const styleIcon = { color: "#F9BD67", fit: "cover"}
@@ -11,18 +12,18 @@ function LandingSection1(){
     return (
         <Container className= "mx-lg-auto mx-md-auto mx-sm-auto d-block mt-3 mb-3">
             <Row>
-                <Col style={{backgroundColor: "pink"}}>
+                <Col md={7} style={{marginTop:100, marginBottom:100}} >
                     <Row className = "mb-3">
                     <HeadingRise>
-                        <div>Rise Your Imagination</div>
+                        <div>Rise Your<br/>Imagination</div>
                     </HeadingRise>
                     <Desc>
                         <div>Everyday brings with it a fresh set of learning posibilities.</div>
                     </Desc>
                     </Row>
                 
-                    <Button variant="primary">Get Started</Button>
-                    <Button variant="secondary" className="mx-3">Learn More</Button>
+                    <ButtonGet >Get Started</ButtonGet>
+                    <ButtonLearn>Learn More</ButtonLearn>
                    
                     {/* <div className="col-auto icons">
                                     <BsFillAwardFill/>
@@ -34,10 +35,10 @@ function LandingSection1(){
                                     </h6>
                                 </div> */}
                     <Row className = "mt-5">
-                        <Col className = "col-lg-1" >
+                        <Col lg={1} md={1} sm={1} xs={2}>
                             <BsFillBookFill style={styleIcon}/>
                         </Col>
-                        <Col className = "col-lg-11">
+                        <Col lg={11} md={11} sm={11} xs={10}>
                         <Best>
                             <div>
                             Metode yang terarah
@@ -52,10 +53,10 @@ function LandingSection1(){
 
                     </Row>
                     <Row className = "mt-1">
-                    <Col clasName = "col-lg-1">
+                    <Col lg={1} md={1} sm={1} xs={2} >
                         <BsFillAwardFill style={styleIcon}/>
                     </Col>
-                    <Col className = "col-lg-11">
+                    <Col lg={11} md={11} sm={11} xs={10}>
                     <Best>
                         <div>
                         Mentor Professional
@@ -70,8 +71,8 @@ function LandingSection1(){
 
                     </Row>
                 </Col>
-                <Col style={{backgroundColor: "blue"}} >
-                    <img src = {section1} alt="gambar section 1" width="425px" height="425px" className= "mx-lg-auto mx-md-auto mx-sm-auto d-block mt-2 mb-2"></img>
+                <Col md={5} style={{marginTop:60, marginBottom:100}} className="art">
+                   <Section1/>
                 </Col>
             </Row>
         </Container>
