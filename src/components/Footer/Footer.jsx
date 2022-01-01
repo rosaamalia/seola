@@ -20,7 +20,7 @@ function Footer(){
                         <Row>
                             <Col className="d-flex flex-column">
                             <span className="judul">AYO BERGABUNG!</span>
-                            <Link className="btn" style={{ 'fontWeight':'700', 'backgroundColor':'white', 'fontSize':'0.7rem', 'width':'50%' }}>
+                            <Link to="/register" className="btn" style={{ 'fontWeight':'700', 'backgroundColor':'white', 'fontSize':'0.7rem', 'width':'50%' }}>
                                 JOIN US
                                 <ImArrowRight2 className="arrow"></ImArrowRight2>
                             </Link>
@@ -38,8 +38,8 @@ function Footer(){
                             <Col>
                                 <Col className="d-flex flex-column">
                                 <p className="judul">QUICK LINK</p>
-                                <Link className="quick-link">About</Link>
-                                <Link className="quick-link">Contact Us</Link>
+                                <Link to="/about" className="quick-link">About</Link>
+                                <Link to="/contact-us" className="quick-link">Contact Us</Link>
                                 </Col>
 
                                 <Col className="d-flex flex-column">

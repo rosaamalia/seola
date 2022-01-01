@@ -8,7 +8,7 @@ function CardKelas(){
     return(
         <React.Fragment>
             <Row style={{ width: '100%'}} className="row-kelas" >
-                <Col className="d-flex flex-wrap justify-content-start col-lg-7 col-md-12 gap-4">
+                <Col className="d-flex flex-wrap justify-content-lg-start justify-content-md-center col-lg-7 col-md-12 gap-4">
                     <div className="card-container">
                         <div className="ikon" style={{ color: '#345CBB' }}>
                             <FaItunesNote></FaItunesNote>
@@ -65,7 +65,7 @@ function CardKelas(){
                         <h1>and Passions</h1>
                         <p>Anyone can be ✨<span style={{ fontWeight: '700' }}>Anything</span>✨</p>
                     </div>
-                    <img src={image} style={{ width: '100%', borderRadius: '3%'}}></img>
+                    <img src={image} className="img" style={{ width: '100%', borderRadius: '3%'}}></img>
                 </Col>
             </Row>
         </React.Fragment>
