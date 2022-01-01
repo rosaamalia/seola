@@ -29,6 +29,12 @@
 }
 
 .card-kelas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
   width: 13rem;
   height: 13rem;
   margin: 0;
