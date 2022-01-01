@@ -1,4 +1,5 @@
 import React from "react";
+import LandingSection1 from "../components/landingsection1";
 import './style/styles.css';
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
@@ -17,6 +18,7 @@ const Section = styled.div`
 function LandingPage(){
     return (
         <Container className="background-page min-vh-100 px-0" fluid>
+            <LandingSection1/>
             <Section style={{ backgroundColor: '#FFEFEB' }}>
                 <CardKelas></CardKelas>
             </Section>
