@@ -63,8 +63,29 @@
   color: #000;
 }
 
-@media (max-width: 925px) {
-  .row {
+@media (max-width: 990px) {
+  .row-kelas {
     flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .img {
+    height: 15rem;
+    object-fit: cover;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 738px) {
+  .card-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-kelas {
+    width: 100%;
+    height: auto;
   }
 }

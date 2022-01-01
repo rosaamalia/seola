@@ -1,4 +1,5 @@
 import React from "react";
+import './style.css';
 import { Container, Row, Col, Form, Button , Dropdown} from "react-bootstrap";
 import Happy from "../gambarLogin/Happy";
 
@@ -7,7 +8,7 @@ function FormLogin() {
     return (
             <Container style={{marginTop: 130 ,marginBottom: 50}}>
                 <Row>
-                    <Col md={6} sm={12}>
+                    <Col md={6} sm={12} className="happy">
                         <Happy/>
                     </Col>
                     <Col md={6} sm={12}>

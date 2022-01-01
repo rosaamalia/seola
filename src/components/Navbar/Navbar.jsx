@@ -13,9 +13,9 @@ function NavigasiBar(){
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Link to="" className="link">Home</Link>
-                            <Link to="" className="link">About</Link>
-                            <Link to="" className="link">Contact Us</Link>
+                            <Link to="/" className="link">Home</Link>
+                            <Link to="/about" className="link">About</Link>
+                            <Link to="/contact-us" className="link">Contact Us</Link>
                             {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
@@ -25,8 +25,8 @@ function NavigasiBar(){
                             </NavDropdown> */}
                         </Nav>
                         <Nav>
-                            <Link to="" className="link" style={{ 'font-weight':'700' }}>SIGN IN</Link>
-                            <Link className="btn" style={{ 'font-weight':'700', 'backgroundColor':'white' }}>
+                            <Link to="/login" className="link" style={{ fontWeight:'700' }}>SIGN IN</Link>
+                            <Link to="/register" className="btn" style={{ fontWeight:'700', 'backgroundColor':'white' }}>
                                 JOIN US
                                 <ImArrowRight2 className="arrow"></ImArrowRight2>
                             </Link>
