@@ -1,9 +1,8 @@
-import LandingPage from "./pages/LandingPage";
-
+import MainRouter from "./routes/MainRouter";
 
 function App() {
   return (
-    <LandingPage/>
+    <MainRouter></MainRouter>
   );
 }
 
