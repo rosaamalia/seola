@@ -1,5 +1,5 @@
 import React from "react";
-import LandingSection1 from "../components/landingsection1";
+import LandingSection1 from "../components/Landing Section1/landingsection1";
 import './style/styles.css';
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
