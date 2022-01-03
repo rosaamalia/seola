@@ -7,6 +7,7 @@ import Footer from '../components/Footer/Footer';
 import LandingPage from '../pages/LandingPage';
 import RegisterPage from '../pages/RegisterPage';
 import LoginPage from '../pages/LoginPage';
+import AboutPage from '../pages/AboutPage';
 
 function MainRouter(){
     return (
@@ -16,6 +17,7 @@ function MainRouter(){
                 <Route path="/" component={LandingPage} exact/>
                 <Route path="/register" component={RegisterPage} exact/>
                 <Route path="/login" component={LoginPage} exact/>
+                <Route path="/about" component={AboutPage} exact/>
             </Switch>
             <Footer></Footer>
         </Router>
