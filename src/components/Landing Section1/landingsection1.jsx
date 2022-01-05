@@ -1,9 +1,10 @@
 import React from "react";
 import "./style.css";
-import { Container, Row ,Col, Button } from "react-bootstrap";
+import { Container, Row ,Col} from "react-bootstrap";
 import Section1 from "./gambar/section1"
 import { BsFillAwardFill, BsFillBookFill } from "react-icons/bs";
 import { HeadingRise, Desc, Best, DescBest, ButtonGet, ButtonLearn } from "../../styles/landingsection1";
+import { Link } from 'react-router-dom';
 
 
 const styleIcon = { color: "#F9BD67", fit: "cover"}
@@ -22,7 +23,9 @@ function LandingSection1(){
                     </Desc>
                     </Row>
                 
-                    <ButtonGet >Get Started</ButtonGet>
+                    <ButtonGet >
+                        <Link to="/register" style={{color: "white", textDecoration : 'none'}}>Get Started</Link>
+                    </ButtonGet>
                     <ButtonLearn>Learn More</ButtonLearn>
                    
                     {/* <div className="col-auto icons">
