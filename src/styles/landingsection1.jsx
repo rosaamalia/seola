@@ -40,6 +40,7 @@ export const ButtonGet = styled.button`
     border-radius: 10px;
     font-size: 15px;
     font-weight: bold;
+    text-decoration: none;
     &:hover{
         background-color: #345CBB;
         color: white;
