@@ -7,7 +7,8 @@ import { HeadingRise, Desc, Best, DescBest, ButtonGet, ButtonLearn } from "../..
 import { Link } from 'react-router-dom';
 
 
-const styleIcon = { color: "#F9BD67", fit: "cover"}
+const styleIcon = { color: "#F9BD67", fit: "cover", fontSize: '2rem'}
+const iconBackground = { backgroundColor: '#F9BD6733', border: '1px solid #F9BD67', borderRadius: '0.5rem'}
 
 function LandingSection1(){
     return (
@@ -38,7 +39,7 @@ function LandingSection1(){
                                     </h6>
                                 </div> */}
                     <Row className = "mt-5">
-                        <Col lg={1} md={1} sm={1} xs={2}>
+                        <Col lg={1} md={1} sm={1} xs={2} className="d-flex justify-content-center align-items-center" style={iconBackground}>
                             <BsFillBookFill style={styleIcon}/>
                         </Col>
                         <Col lg={11} md={11} sm={11} xs={10}>
@@ -49,14 +50,14 @@ function LandingSection1(){
                         </Best>
                         <DescBest>
                             <div>
-                            Dengan tahapan eskursi,materi,kreasi dan diskusi
+                            Dengan tahapan eskursi, materi, kreasi dan diskusi
                             </div>
                         </DescBest>
                         </Col>
 
                     </Row>
-                    <Row className = "mt-1">
-                    <Col lg={1} md={1} sm={1} xs={2} >
+                    <Row className = "mt-3">
+                    <Col lg={1} md={1} sm={1} xs={2} className="d-flex justify-content-center align-items-center" style={iconBackground}>
                         <BsFillAwardFill style={styleIcon}/>
                     </Col>
                     <Col lg={11} md={11} sm={11} xs={10}>
