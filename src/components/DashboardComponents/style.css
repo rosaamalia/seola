@@ -1,0 +1,51 @@
+.banner {
+    position: relative;
+    width: 100%;
+}
+
+.img-dashboard {
+    position: absolute;
+    z-index: 1;
+    width: 15rem;
+    bottom: 0%;
+    right: 10%;
+}
+
+.banner-card {
+    align-self: flex-end;
+    background: linear-gradient(91.64deg, #FFEFEB 53.27%, #F76761 118.78%);
+    width: 90%;
+}
+
+.img-kelas {
+    width: 90%;
+    height: 11.5rem;
+    object-fit: cover;
+}
+
+.button-selengkapnya {
+    padding: 0.25rem;
+    background: #242A55;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.link-selengkapnya {
+    text-decoration: none;
+    font-weight: 650;
+    color: white;
+}
+
+.link-selengkapnya:hover {
+    color: rgba(255, 255, 255, 0.815);
+}
+
+.ikon-modul {
+    background-color: #F9BD67;
+    width: 100%;
+    font-size: 4rem;
+    border-radius: 30px;
+}
