@@ -3,6 +3,7 @@
     position: relative;
     display: flex;
     justify-content: center;
+    height: 100%;
 }
 
 .container-photo {
@@ -58,8 +59,7 @@
     margin-top: 4rem;
     padding: 1rem;
     padding-top: 4rem;
-    background-color: blue;
-    height: auto;
+    height: 100%;
     width: 80%;
 }
 
@@ -97,18 +97,18 @@
     object-fit: cover;
 }
 
-.portofolio-button {
+.profile-button {
     background: #242A55;
     padding: 0.5rem 1rem;
     border-radius: 30px;
 }
 
-.portofolio-link {
+.profile-link {
     font-weight: 500;
     text-decoration: none;
     color: white;
 }
 
-.portofolio-link:hover {
+.profile-link:hover {
     color: #ffefebbd;
 }

@@ -7,7 +7,7 @@ import ProgresKelas from "../components/ProfileComponents/ProgresKelas";
 
 function ProfilePage(){
     return (
-        <Container fluid className="background-page min-vh-100 px-5 d-flex justify-content-center align-items-center">
+        <Container fluid className="background-page min-vh-100 px-5 d-flex justify-content-center align-items-start">
             <Col lg={4} className="d-flex justify-content-start my-5">
                 <ProfileCard></ProfileCard>
             </Col>

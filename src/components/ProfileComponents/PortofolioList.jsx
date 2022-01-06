@@ -39,8 +39,8 @@ function PortofolioList() {
                         className="preview-portofolio"/>
                     </div>
                 </div>
-                <div className="portofolio-button">
-                    <Link to="/portofolio" className="portofolio-link">LIHAT SEMUA PORTOFOLIO</Link>
+                <div className="profile-button">
+                    <Link to="/portofolio" className="profile-link">LIHAT SEMUA PORTOFOLIO</Link>
                 </div>
             </Card>
         </React.Fragment>
