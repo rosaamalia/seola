@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const HeadingRise = styled.div`
    font-size: 40px;
    color: black;
-   font-family: sans-serif;
+   /* font-family: sans-serif; */
    font-weight: bold;
   
 `
 export const Desc = styled.div`
     font-size: 20px;
     color: black;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
     font-weight: normal;
     margin-top: 10px
 `
@@ -18,13 +18,13 @@ export const Desc = styled.div`
 export const Best = styled.div`
     font-size: 20px;
     color: black;
-    font-style: sans-serif;
+    /* font-style: sans-serif; */
     font-weight: bold;
 `
 export const DescBest = styled.div`
     font-size: 17px;
     color: black;
-    font-style: serif;
+    /* font-style: serif; */
     font-weight: normal;
 `
 export const Rating = styled.div`

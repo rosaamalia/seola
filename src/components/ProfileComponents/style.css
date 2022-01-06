@@ -1,0 +1,114 @@
+/** Profile Card */
+.container-profile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.container-photo {
+    position: absolute;
+    z-index: 1;
+}
+
+.tippy {
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+}
+
+.tippy-edit {
+    color: white;
+    background-color: #F76761;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem 0.7rem;
+    margin-left: 0.5rem;
+    border-radius: 30px;
+    border: 1px solid #fa3731;
+    font-size: small;
+}
+
+.edit-button {
+    font-size: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 100%;
+    background-color: #F76761;
+}
+
+.edit-button:hover {
+    background-color: #fdbdba;
+    color: #fa3731;
+}
+
+.photo-profile {
+    width: 7rem;
+    height: 7rem;
+    object-fit: cover;
+    border-radius: 100px;
+    top: 0%;
+    z-index: 1;
+}
+
+.box-profile {
+    margin-top: 4rem;
+    padding: 1rem;
+    padding-top: 4rem;
+    background-color: blue;
+    height: auto;
+    width: 80%;
+}
+
+.bidang-seni {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background: #FFF8EF;
+    border: 1px solid #F9BD67;
+    border-radius: 30px;
+}
+
+.oranye-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 30px;
+    background: #FFEFEB;
+    border: 1px solid #F76761;
+}
+
+/** Preview Portofolio */
+.image-portofolio-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.preview-portofolio {
+    width: 10vw;
+    height: 10vw;
+    margin: 1.5rem 0;
+    object-fit: cover;
+}
+
+.portofolio-button {
+    background: #242A55;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.portofolio-link {
+    font-weight: 500;
+    text-decoration: none;
+    color: white;
+}
+
+.portofolio-link:hover {
+    color: #ffefebbd;
+}
