@@ -7,6 +7,7 @@ import Footer from '../components/Footer/Footer';
 import LandingPage from '../pages/LandingPage';
 import RegisterPage from '../pages/RegisterPage';
 import LoginPage from '../pages/LoginPage';
+import EditProfile from '../components/Form Edit Profile/editprofile';
 
 function MainRouter(){
     return (
@@ -16,6 +17,7 @@ function MainRouter(){
                 <Route path="/" component={LandingPage} exact/>
                 <Route path="/register" component={RegisterPage} exact/>
                 <Route path="/login" component={LoginPage} exact/>
+                <Route path="/editprofile" component={EditProfile} exact/>
             </Switch>
             <Footer></Footer>
         </Router>
