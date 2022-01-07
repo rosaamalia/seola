@@ -1,0 +1,71 @@
+.about-deskripsi {
+    padding: 1rem 0;
+    width: 50%;
+    text-align: center;
+}
+
+.col-odd {
+    height: 23rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.col-even {
+    height: 23rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.col-odd img, .col-even img {
+    width: 100%;
+    height: 20rem;
+    border-radius: 0.25rem;
+    object-fit: cover;
+}
+
+.about-photo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.about-photo-icon {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+}
+
+.wave {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.metode {
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.metode-ikon {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 100%;
+}
+
+.photo-narasumber {
+    width: 90%;
+    height: 20rem;
+    object-fit: cover;
+    border-radius: 10px;
+}
