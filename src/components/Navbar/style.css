@@ -28,3 +28,28 @@
 .arrow {
     margin: auto 0 0.1rem 0.5rem;
 }
+
+.navbar-profil {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.profil-dropdown {
+    color: white;
+    background-color: #242A55;
+}
+
+.link-dropdown {
+    text-decoration: none;
+    color: black;
+}
+
+.link-dropdown:hover {
+    color: black;
+}
+
+.home {
+    margin: 0 0.5rem 0.1rem 0;
+}
