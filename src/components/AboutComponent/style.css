@@ -1,0 +1,40 @@
+.about-deskripsi {
+    padding: 1rem 0;
+    width: 50%;
+    text-align: center;
+}
+
+.col-odd {
+    height: 23rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.col-even {
+    height: 23rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.col-odd img, .col-even img {
+    width: 100%;
+    height: 20rem;
+    border-radius: 0.25rem;
+    object-fit: cover;
+}
+
+.wave {
+    position: absolute;
+    top: 80%;
+    z-index: -1;
+}
+
+.metode {
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #94435C;
+}

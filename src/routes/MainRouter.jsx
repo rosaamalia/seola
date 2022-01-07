@@ -10,6 +10,7 @@ import LoginPage from '../pages/LoginPage';
 import EditProfile from '../components/Form Edit Profile/editprofile';
 import ProfilePage from '../pages/ProfilePage';
 import DashboardPage from '../pages/DashboardPage';
+import AboutPage from '../pages/AboutPage';
 
 function MainRouter(){
     return (
@@ -22,6 +23,7 @@ function MainRouter(){
                 <Route path="/editprofile" component={EditProfile} exact/>
                 <Route path="/profile" component={ProfilePage} exact/>
                 <Route path="/dashboard" component={DashboardPage} exact/>
+                <Route path="/about" component={AboutPage} exact/>
             </Switch>
             <Footer></Footer>
         </Router>
