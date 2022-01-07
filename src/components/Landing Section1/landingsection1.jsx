@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import { Container, Row ,Col} from "react-bootstrap";
+import { Container, Row ,Col } from "react-bootstrap";
 import Section1 from "./gambar/section1"
 import { BsFillAwardFill, BsFillBookFill } from "react-icons/bs";
 import { HeadingRise, Desc, Best, DescBest, ButtonGet, ButtonLearn } from "../../styles/landingsection1";
@@ -28,16 +28,7 @@ function LandingSection1(){
                         <Link to="/register" style={{color: "white", textDecoration : 'none'}}>Get Started</Link>
                     </ButtonGet>
                     <ButtonLearn>Learn More</ButtonLearn>
-                   
-                    {/* <div className="col-auto icons">
-                                    <BsFillAwardFill/>
-                                    <h6 className="mt-3">
-                                        100% Secure <br />
-                                    <span className="text-gray-500 font-weight-light">
-                                            Payment online
-                                    </span>
-                                    </h6>
-                                </div> */}
+    
                     <Row className = "mt-5">
                         <Col lg={1} md={1} sm={1} xs={2} className="d-flex justify-content-center align-items-center" style={iconBackground}>
                             <BsFillBookFill style={styleIcon}/>

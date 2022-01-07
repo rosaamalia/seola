@@ -1,7 +1,6 @@
 import React from "react";
 import './style.css';
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
-import { FaHome } from 'react-icons/fa';
+import { Navbar, Nav, Container } from "react-bootstrap";
 import { ImArrowRight2 } from 'react-icons/im';
 import { Link } from 'react-router-dom';
 
