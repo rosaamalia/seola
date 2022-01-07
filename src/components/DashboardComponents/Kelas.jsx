@@ -20,7 +20,7 @@ function Kelas() {
             <Card className="mb-5 p-0 d-flex align-items-between flex-row" style={{ width: '90%', height: 'auto' }}>
                 <Row style={{ width: '100%', height: 'auto' }}>
                     <Col md={4} className="d-flex p-0 m-0">
-                        <img className="img-kelas rounded-start" src="https://i.pinimg.com/564x/1c/27/1c/1c271c2570a3378ef926fa650ebedf7b.jpg" />
+                        <img className="img-kelas rounded-start" src="https://i.pinimg.com/564x/90/8d/80/908d80b06a22f18f1531067c2e89e2df.jpg" />
                     </Col>
                     <Col md={8} className="d-flex flex-column justify-content-center p-3 gap-3" style={{ textAlign: 'left' }}>
                         <span><IoRibbon/> Kelasku</span>

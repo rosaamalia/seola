@@ -12,7 +12,8 @@ function DashboardPage(){
                 <Kelas></Kelas>
             </Col>
             <Col lg={4} className="mt-5">
-                <Card></Card>
+                <PreviewProfil></PreviewProfil>
+                <Leaderboard></Leaderboard>
             </Col>
         </Container>
     )

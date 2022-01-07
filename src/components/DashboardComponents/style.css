@@ -49,3 +49,61 @@
     font-size: 4rem;
     border-radius: 30px;
 }
+
+.dashboard-profile {
+    width: 4rem;
+    height: 4rem;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.link-abu {
+    font-size: small;
+    text-decoration: none;
+    color: #808080;
+}
+
+.link-abu:hover {
+    color: black;
+}
+
+.leaderboard-profil-container {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leaderboard-crown {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    font-size: 1.25rem;
+    color: #F9BD67;
+    transform: rotate(15deg);
+}
+
+.leaderboard-profil {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.leaderboard-nama {
+    text-align: left;
+    font-weight: 500;
+}
+
+.leaderboard-poin {
+    font-size: small;
+    background: #FFEFEB;
+    border: 1px solid #F76761;
+    padding: 0 0.25rem;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
