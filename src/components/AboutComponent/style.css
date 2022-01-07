@@ -23,9 +23,13 @@
     object-fit: cover;
 }
 
+.about-photo-container {
+    position: relative;
+}
+
 .wave {
     position: absolute;
-    top: 80%;
+    bottom: 0%;
     z-index: -1;
 }
 

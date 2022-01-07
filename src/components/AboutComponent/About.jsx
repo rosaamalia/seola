@@ -12,9 +12,10 @@ function About(){
                 <p>Remedial merupakan kegiatan yang berfokus pada pola konsumsi informasi dan pengetahuan berdasarkan perkembangan hari ini. Dengan metode saling silang informasi yang menghasilkan pengetahuan dan pendekatan seni dan literasi.</p>
             </div>
 
+            <div className="about-photo-container">
             <Row className="p-5" style={{ width: '100%' }}>
                 <Col className="col-3 col-odd" style={{ display: 'relative' }}>
-                    <img src="http://serrum.id/wp-content/uploads/2019/03/WhatsApp-Image-2019-02-16-at-12.08.27.jpeg"></img>
+                    <img src="http://remedial.id/wp-content/uploads/2018/09/Danti-foto.jpg"></img>
                 </Col>
                 <Col className="col-3 col-even">
                     <img src="http://remedial.id/wp-content/uploads/2019/03/aa2622ea-3945-4412-9849-6e21c08b9482.jpg"></img>
@@ -23,16 +24,16 @@ function About(){
                     <img src="http://remedial.id/wp-content/uploads/2019/03/IMG_7726-600x400.jpg"></img>
                 </Col>
                 <Col className="col-3 col-even">
-                    <img src="http://serrum.id/wp-content/uploads/2019/03/WhatsApp-Image-2019-02-23-at-10.29.26.jpeg"></img>
+                    <img src="http://remedial.id/wp-content/uploads/2019/03/IMG_7724-1024x683.jpg"></img>
                 </Col>
             </Row>
-
-            
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="wave">
-                <path fill="#FFEFEB" fill-opacity="1" d="M0,224L60,229.3C120,235,240,245,360,218.7C480,192,600,128,720,90.7C840,53,960,43,1080,64C1200,85,1320,139,1380,165.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+                <path fill="#A7E3F34D" fill-opacity="1" d="M0,64L48,53.3C96,43,192,21,288,48C384,75,480,149,576,181.3C672,213,768,203,864,181.3C960,160,1056,128,1152,122.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
             </svg>
+            </div>
 
-            <Row className="p-5 d-flex justify-content-end align-items-center" style={{ backgroundColor: '#FFEFEB' }}>
+
+            <Row className="p-5 d-flex justify-content-end align-items-center" style={{ background: '#A7E3F34D', width: '100%' }}>
                 <Col className="col-lg-2 d-flex justify-content-end align-items-center">
                     <h1>Tujuan Kegiatan</h1>
                 </Col>
@@ -47,12 +48,7 @@ function About(){
                         <li>Mencoba memformulasikan</li>
                     </ul>
                 </Col>
-
             </Row>
-
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="wave" style={{ top: '170vh' }}>
-                <path fill="#FFEFEB" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,74.7C640,75,800,117,960,128C1120,139,1280,117,1360,106.7L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-            </svg>
 
             <Row className="pb-5 px-5" style={{ paddingTop: '25vh' }}>
                 <Row className="pb-5">
@@ -61,7 +57,7 @@ function About(){
                 <Row className="gap-4">
                     <Col className="metode">
                         <IoIosBasket></IoIosBasket>
-                        <h3>Ekskursi</p>
+                        <h3>Ekskursi</h3>
                     </Col>
                     <Col className="metode">
                         <h3>Ekskursi</h3>
