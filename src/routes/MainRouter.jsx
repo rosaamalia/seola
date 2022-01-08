@@ -7,7 +7,7 @@ import Footer from '../components/Footer/Footer';
 import LandingPage from '../pages/LandingPage';
 import RegisterPage from '../pages/RegisterPage';
 import LoginPage from '../pages/LoginPage';
-import EditProfile from '../components/Form Edit Profile/editprofile';
+import EditProfile from '../pages/EditProfilePage';
 import ProfilePage from '../pages/ProfilePage';
 import DashboardPage from '../pages/DashboardPage';
 import AboutPage from '../pages/AboutPage';
