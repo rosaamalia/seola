@@ -7,7 +7,7 @@ import ModalImage from 'react-modal-image';
 function PortofolioList() {
     return ( 
         <React.Fragment>
-            <Card style={{ width: '100%', height: 'auto', padding: '2rem' }}>
+            <Card className="mb-5 justify-content-center align-items-center" style={{ width: '100%', height: 'auto', padding: '2rem', textAlign: 'center' }}>
                 <h3 className="m-0 p-0 align-self-start">Portofolio</h3>
                 <div className="image-portofolio-container">
                     <div>

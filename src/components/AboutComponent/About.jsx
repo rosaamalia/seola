@@ -60,28 +60,28 @@ function About(){
                     <h1 style={{ textAlign: 'center' }}>Metode Pembelajaran</h1>
                 </Row>
                 <Row className="gap-4 m-0 justify-content-center align-items-start">
-                    <Col md={3} className="metode gap-2" style={{ border: '1px solid #345CBB' }}>
+                    <Col md={2} className="metode gap-2" style={{ border: '1px solid #345CBB' }}>
                         <div className="metode-ikon" style={{ background: '#A6E3F14D', color: '#345CBB'}}>
                             <IoIosBasket></IoIosBasket>
                         </div>
                         <h3 className="p-0 m-0">Ekskursi</h3>
                         <span style={{ textAlign: 'center' }}>perjalanan untuk bersenang-senang; piknik; darmawisata</span>
                     </Col>
-                    <Col md={3} className="metode gap-2" style={{ border: '1px solid #F76761' }}>
+                    <Col md={2} className="metode gap-2" style={{ border: '1px solid #F76761' }}>
                         <div className="metode-ikon" style={{ background: '#F7676133', color: '#F76761'}}>
                             <SiBookstack></SiBookstack>
                         </div>
                         <h3 className="p-0 m-0">Materi</h3>
                         <span style={{ textAlign: 'center' }}>sesuatu yang menjadi bahan (untuk diujikan, dipikirkan, dibicarakan, dikarangkan, dan sebagainya)</span>
                     </Col>
-                    <Col md={3} className="metode gap-2" style={{ border: '1px solid #F9BD67' }}>
+                    <Col md={2} className="metode gap-2" style={{ border: '1px solid #F9BD67' }}>
                         <div className="metode-ikon" style={{ background: '#F9BD6733', color: '#F9BD67'}}>
                             <FaBrush></FaBrush>
                         </div>
                         <h3 className="p-0 m-0">Kreasi</h3>
                         <span style={{ textAlign: 'center' }}>hasil daya cipta; hasil daya khayal (penyair, komponis, pelukis, dan sebagainya)</span>
                     </Col>
-                    <Col md={3} className="metode gap-2" style={{ border: '1px solid #94435C' }}>
+                    <Col md={2} className="metode gap-2" style={{ border: '1px solid #94435C' }}>
                         <div className="metode-ikon" style={{ background: '#94435C4D', color: '#94435C'}}>
                             <BsChatSquareQuoteFill></BsChatSquareQuoteFill>
                         </div>

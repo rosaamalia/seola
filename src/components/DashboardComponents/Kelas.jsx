@@ -17,7 +17,7 @@ function Kelas() {
                 </Card>
             </div>
 
-            <Card className="mb-5 p-0 d-flex align-items-between flex-row" style={{ width: '90%', height: 'auto' }}>
+            <Card className="mb-5 p-0 d-flex justify-content-center align-items-between flex-row" style={{ width: '90%', height: 'auto' }}>
                 <Row style={{ width: '100%', height: 'auto' }}>
                     <Col md={4} className="d-flex p-0 m-0">
                         <img className="img-kelas rounded-start" src="https://i.pinimg.com/564x/90/8d/80/908d80b06a22f18f1531067c2e89e2df.jpg" />
@@ -34,7 +34,7 @@ function Kelas() {
             </Card>
 
             <h5 className="mb-3">Modul yang terakhir dilihat</h5>
-            <Card className="mb-5 p-0 d-flex align-items-between flex-row" style={{ width: '90%', height: 'auto' }}>
+            <Card className="mb-5 p-0 d-flex justify-content-center align-items-between flex-row" style={{ width: '90%', height: 'auto' }}>
                 <Row className="py-3" style={{ width: '100%', height: 'auto' }}>
                     <Col md={4} className="d-flex p-3 m-0">
                         <div className="d-flex justify-content-center align-items-center ikon-modul">
@@ -52,7 +52,7 @@ function Kelas() {
             </Card>
 
             <h5 className="mb-3">Tugas yang akan datang</h5>
-            <Card className="mb-5 p-0 d-flex align-items-between flex-row" style={{ width: '90%', height: 'auto' }}>
+            <Card className="mb-5 p-0 d-flex justify-content-center align-items-between flex-row" style={{ width: '90%', height: 'auto' }}>
                 <Row className="py-3" style={{ width: '100%', height: 'auto' }}>
                     <Col md={4} className="d-flex p-3 m-0">
                         <div className="d-flex justify-content-center align-items-center ikon-modul">
