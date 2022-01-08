@@ -8,7 +8,7 @@ import { FaCrown } from 'react-icons/fa';
 function Leaderboard() {
     return ( 
         <React.Fragment>
-            <Card className="mb-5 py-4 d-flex align-items-between flex-row" style={{ width: '90%', height: 'auto' }}>
+            <Card className="mb-5 py-4 d-flex justify-content-center align-items-between flex-row" style={{ width: '90%', height: 'auto', textAlign: 'center' }}>
                 <Col>
                 <h3 className='mb-4'>Leaderboard</h3>
 

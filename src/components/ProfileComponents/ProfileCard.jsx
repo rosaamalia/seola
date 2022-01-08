@@ -20,7 +20,7 @@ function ProfileCard() {
                             Edit Profile
                         </div>
                     )}>
-                        <Link to="/" className="edit-button">
+                        <Link to="/editprofile" className="edit-button">
                             <BiEdit></BiEdit>
                         </Link>
                     </Tooltip>
