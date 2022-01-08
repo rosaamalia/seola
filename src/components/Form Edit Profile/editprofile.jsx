@@ -8,7 +8,7 @@ function EditProfile(){
         <Container className="py-5">
             <Row>
                 <Form>
-                    <Row>
+                    <Row className="gap-5">
                         <Col>
                             <Row className="mt-4 py-1 justify-content-start align-items-center">
                                 <Col md={'auto'}>
