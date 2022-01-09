@@ -12,6 +12,7 @@ import ProfilePage from '../pages/ProfilePage';
 import DashboardPage from '../pages/DashboardPage';
 import AboutPage from '../pages/AboutPage';
 import PenilaianPage from '../pages/PenilaianPage';
+import DetailModulPage from '../pages/DetailModulPage';
 
 function MainRouter(){
     return (
@@ -26,6 +27,8 @@ function MainRouter(){
                 <Route path="/dashboard" component={DashboardPage} exact/>
                 <Route path="/about" component={AboutPage} exact/>
                 <Route path="/penilaian" component={PenilaianPage} exact/>
+                <Route path="/detailmodul" component={DetailModulPage} exact/>
+                
             </Switch>
             <Footer></Footer>
         </Router>
