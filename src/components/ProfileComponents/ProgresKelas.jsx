@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
-import { Card, Row, Col, ProgressBar } from 'react-bootstrap';
+import { Card, Col, ProgressBar } from 'react-bootstrap';
 
 function ProgresKelas() {
     return ( 

@@ -1,21 +1,19 @@
 import React from "react";
-import { Container, Row ,Col, Form, Button, Card } from "react-bootstrap";
-import editprofile from "./gambar/editprofile.png";
-import './style.css';
+import { Container, Row ,Col, Form, Button } from "react-bootstrap";
 
 function EditProfile(){
     return (
         <Container className="py-5">
             <Row>
                 <Form>
-                    <Row className="gap-5">
+                    <Row className="gap-md-5 flex-column flex-md-row">
                         <Col>
-                            <Row className="mt-4 py-1 justify-content-start align-items-center">
-                                <Col md={'auto'}>
-                                <img className="photo-profile" src="https://i.pinimg.com/564x/61/2a/76/612a7697020dd20eab0fcdd22e23a1e9.jpg"></img>
+                            <Row className="mt-4 py-1 flex-column flex-md-row justify-content-md-start align-items-center">
+                                <Col className="col-auto mb-3 mb-lg-0">
+                                    <img className="photo-profile" src="https://i.pinimg.com/564x/61/2a/76/612a7697020dd20eab0fcdd22e23a1e9.jpg"></img>
                                 </Col>
-                                <Col md={'auto'} className="justify-content-start button-selengkapnya">
-                                <Button type="submit" className="p-1" style={{ background: 'none', border: 'none', boxShadow: 'none' }}>UNGGAH FOTO PROFIL</Button>
+                                <Col className="col-auto justify-content-center justify-content-md-start button-selengkapnya">
+                                    <Button type="submit" className="p-1" style={{ background: 'none', border: 'none', boxShadow: 'none' }}>UNGGAH FOTO PROFIL</Button>
                                 </Col>
                             </Row>
                             <Row>
@@ -23,7 +21,7 @@ function EditProfile(){
                                     <Form.Label>Nama Depan</Form.Label>
                                     <Form.Control className="px-4" type="text" placeholder="Tulis nama depan" style={{borderRadius: 30, textAlign: "left"}} />
                                 </Form.Group>
-                                <Form.Group className="col-md-6 my-4" controlId="namabelakang">
+                                <Form.Group className="col-md-6 mt-0 mb-4 my-md-4" controlId="namabelakang">
                                     <Form.Label>Nama Belakang</Form.Label>
                                     <Form.Control className="px-4" type="text" placeholder="Tulis nama belakang"style={{borderRadius: 30, textAlign: "left"}} />
                                 </Form.Group>
@@ -66,7 +64,7 @@ function EditProfile(){
                             <h5 className="mt-5">Sosial Media Kamu</h5>
                             <Form.Group className="my-4 col-md-12" controlId="facebook">
                                 <Form.Label>Facebook</Form.Label>
-                                <Form.Control className="px-4" type="text" placeholder="Nama tampilkan akun facebook" style={{borderRadius: 30, textAlign: "left"}} />
+                                <Form.Control className="px-4" type="text" placeholder="Nama akun facebook" style={{borderRadius: 30, textAlign: "left"}} />
                             </Form.Group>
                             <Form.Group className="mb-4 col-md-12" controlId="instagram">
                                 <Form.Label>Instagram</Form.Label>
@@ -79,7 +77,7 @@ function EditProfile(){
                         </Col>
                     </Row>
                     <Row>
-                        <Col md={'auto'} className="m-2 mt-4 justify-content-start button-selengkapnya">
+                        <Col className="col-sm-auto m-2 mt-4 justify-content-center justify-content-md-start button-selengkapnya">
                             <Button type="submit" className="p-1" style={{ background: 'none', border: 'none', boxShadow: 'none' }}>SIMPAN PERUBAHAN</Button>
                         </Col>
                     </Row>

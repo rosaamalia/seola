@@ -17,7 +17,7 @@ function Footer(){
                         <p>4, RT.4/RW.4, Jagakarsa, South Jakarta City, Jakarta 12620</p>
                     </Col>
                     <Col className="col-margin-right">
-                        <Row>
+                        <Row className="navbar-mobile">
                             <Col className="d-flex flex-column">
                             <span className="judul">AYO BERGABUNG!</span>
                             <Link to="/register" className="btn" style={{ 'fontWeight':'700', 'backgroundColor':'white', 'fontSize':'0.7rem', 'width':'50%' }}>
@@ -26,17 +26,17 @@ function Footer(){
                             </Link>
                             </Col>
 
-                            <Col xs={3} className="d-flex flex-column">
-                            <span className="judul">KELAS</span>
-                            <span>Seni Rupa</span>
-                            <span>Seni Tari</span>
-                            <span>Seni Musik</span>
-                            <span>Seni Lukis</span>
-                            <span>Sastra</span>
+                            <Col md={3} className="d-flex flex-column">
+                                <span className="judul">KELAS</span>
+                                <span>Seni Rupa</span>
+                                <span>Seni Tari</span>
+                                <span>Seni Musik</span>
+                                <span>Seni Lukis</span>
+                                <span>Sastra</span>
                             </Col>
 
                             <Col>
-                                <Col className="d-flex flex-column">
+                                <Col className="d-flex flex-column ">
                                 <p className="judul">QUICK LINK</p>
                                 <Link to="/about" className="quick-link">About</Link>
                                 <Link to="/contact-us" className="quick-link">Contact Us</Link>
