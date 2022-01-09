@@ -69,3 +69,13 @@
     object-fit: cover;
     border-radius: 10px;
 }
+
+@media (max-width: 576px) {
+    .about-deskripsi {
+        width: 70%;
+    }
+
+    .button-selengkapnya {
+        width: 80%
+    }
+}

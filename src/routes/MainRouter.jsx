@@ -11,6 +11,7 @@ import EditProfile from '../pages/EditProfilePage';
 import ProfilePage from '../pages/ProfilePage';
 import DashboardPage from '../pages/DashboardPage';
 import AboutPage from '../pages/AboutPage';
+import PenilaianPage from '../pages/PenilaianPage';
 
 function MainRouter(){
     return (
@@ -24,6 +25,7 @@ function MainRouter(){
                 <Route path="/profile" component={ProfilePage} exact/>
                 <Route path="/dashboard" component={DashboardPage} exact/>
                 <Route path="/about" component={AboutPage} exact/>
+                <Route path="/penilaian" component={PenilaianPage} exact/>
             </Switch>
             <Footer></Footer>
         </Router>

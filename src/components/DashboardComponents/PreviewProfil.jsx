@@ -7,7 +7,7 @@ import { IoRibbon, IoStar } from 'react-icons/io5';
 function PreviewProfil() {
     return ( 
         <React.Fragment>
-            <Card className="mb-5 p-4 d-flex justify-content-center align-items-between flex-row" style={{ width: '90%', height: 'auto', textAlign: 'center' }}>
+            <Card className="mb-5 p-4 d-flex justify-content-center align-items-between flex-row" style={{ width: '100%', height: 'auto', textAlign: 'center' }}>
                 <Col>
                     <Row className="justify-content-center align-items-center">
                         <Col md={3}>

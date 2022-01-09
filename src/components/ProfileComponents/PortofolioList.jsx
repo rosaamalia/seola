@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
-import { Card, Row, Col } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import ModalImage from 'react-modal-image';
 
 function PortofolioList() {
     return ( 
         <React.Fragment>
             <Card className="mb-5 justify-content-center align-items-center" style={{ width: '100%', height: 'auto', padding: '2rem', textAlign: 'center' }}>
-                <h3 className="m-0 p-0 align-self-start">Portofolio</h3>
-                <div className="image-portofolio-container">
+                <h3 className="mb-3 m-md-0 p-0 text-center text-md-start">Portofolio</h3>
+                <div className="image-portofolio-container d-none d-md-flex">
                     <div>
                     <ModalImage
                         small="https://i.pinimg.com/564x/95/4d/97/954d97097205bcc1bb872889819928eb.jpg"

@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
-import { Card, Row, Col, ProgressBar } from 'react-bootstrap';
+import { Card, Row, Col } from 'react-bootstrap';
 import { IoStar } from 'react-icons/io5';
 import { FaCrown } from 'react-icons/fa';
 
 function Leaderboard() {
     return ( 
         <React.Fragment>
-            <Card className="mb-5 py-4 d-flex justify-content-center align-items-between flex-row" style={{ width: '90%', height: 'auto', textAlign: 'center' }}>
+            <Card className="mb-5 py-4 d-flex justify-content-center align-items-between flex-row" style={{ width: '100%', height: 'auto', textAlign: 'center' }}>
                 <Col>
                 <h3 className='mb-4'>Leaderboard</h3>
 

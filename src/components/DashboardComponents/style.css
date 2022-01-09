@@ -8,13 +8,14 @@
     z-index: 1;
     width: 15rem;
     bottom: 0%;
-    right: 10%;
+    right: 5%;
 }
 
 .banner-card {
     align-self: flex-end;
     background: linear-gradient(91.64deg, #FFEFEB 53.27%, #F76761 118.78%);
     width: 90%;
+    padding: 2rem;
 }
 
 .img-kelas {
@@ -106,4 +107,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .img-dashboard {
+        width: 40%;
+        right: 0%;
+    }
+
+    .banner-card {
+        font-size: x-small;
+        padding: 1rem;
+    }
+
+    .banner-card h4 {
+        font-size: small;
+    }
 }
