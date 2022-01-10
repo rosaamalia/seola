@@ -14,7 +14,7 @@ function HeaderEvent() {
             marginTop: 100, 
             marginBottom: 50,
             borderRadius : 8
-        }}>
+        }} className="col-lg col-md col-sm col-xs">
             Event Seni
         </Container>
     )

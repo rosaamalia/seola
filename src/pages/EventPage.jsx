@@ -1,13 +1,15 @@
 import React from "react";
 import CardEvent from "../components/Event/cardevent";
 import HeaderEvent from "../components/Event/headerevent";
+import { Container } from "react-bootstrap";
 
 function EventPage(){
     return (
-        <React.Fragment>
+        <Container>
             <HeaderEvent/>
-            <CardEvent/>
-        </React.Fragment>
+            <CardEvent/>  
+            
+        </Container>
     )
 }
 
