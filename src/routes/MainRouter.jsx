@@ -10,6 +10,7 @@ import LoginPage from '../pages/LoginPage';
 import EditProfile from '../pages/EditProfilePage';
 import ProfilePage from '../pages/ProfilePage';
 import DashboardPage from '../pages/DashboardPage';
+import EventPage from '../pages/EventPage';
 import AboutPage from '../pages/AboutPage';
 import PenilaianPage from '../pages/PenilaianPage';
 import DetailModulPage from '../pages/DetailModulPage';
@@ -25,6 +26,7 @@ function MainRouter(){
                 <Route path="/editprofile" component={EditProfile} exact/>
                 <Route path="/profile" component={ProfilePage} exact/>
                 <Route path="/dashboard" component={DashboardPage} exact/>
+                <Route path="/eventpage" component={EventPage} exact/>
                 <Route path="/about" component={AboutPage} exact/>
                 <Route path="/penilaian" component={PenilaianPage} exact/>
                 <Route path="/detailmodul" component={DetailModulPage} exact/>
