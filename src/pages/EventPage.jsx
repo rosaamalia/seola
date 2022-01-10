@@ -8,6 +8,7 @@ function EventPage(){
         <Container>
             <HeaderEvent/>
             <CardEvent/>  
+            
         </Container>
     )
 }
