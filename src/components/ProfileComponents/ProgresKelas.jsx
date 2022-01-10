@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
-import { Card, Row, Col, ProgressBar } from 'react-bootstrap';
+import { Card, Col, ProgressBar } from 'react-bootstrap';
 
 function ProgresKelas() {
     return ( 
         <React.Fragment>
-            <Card style={{ width: '100%', height: 'auto', padding: '2rem' }}>
+            <Card className="mb-5 justify-content-center align-items-center" style={{ width: '100%', height: 'auto', padding: '2rem' }}>
                 <h3 className="m-0 p-0 align-self-start">Progres Kelasku</h3>
                 <Col className="mt-4" style={{ width: '100%' }}>
                     <p style={{ textAlign: 'left' }}>Modul 1: Mengenal Body Painting</p>

@@ -1,0 +1,43 @@
+.video-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    margin-bottom: 30px;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+  
+.video-responsive iframe {
+    left: 0;
+    top: 0;
+}
+
+
+@media (max-width: 770px) {
+    .video-responsive {
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+        margin-bottom: 30px;
+        margin-left: 20px;
+        margin-top: 30px;
+        width: 480 100% !important ;
+        height: 360 100%!important ;
+    }
+}
+
+@media (max-width: 425px){
+    .video-responsive{
+        overflow: hidden;
+        padding-bottom: 56.25%;
+        position: relative;
+        height: 0;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-top: 10px;
+        width: 256;
+        height: 144;
+    }
+}

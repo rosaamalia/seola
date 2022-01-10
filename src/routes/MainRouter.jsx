@@ -7,11 +7,13 @@ import Footer from '../components/Footer/Footer';
 import LandingPage from '../pages/LandingPage';
 import RegisterPage from '../pages/RegisterPage';
 import LoginPage from '../pages/LoginPage';
-import EditProfile from '../components/Form Edit Profile/editprofile';
+import EditProfile from '../pages/EditProfilePage';
 import ProfilePage from '../pages/ProfilePage';
 import DashboardPage from '../pages/DashboardPage';
 import EventPage from '../pages/EventPage';
-
+import AboutPage from '../pages/AboutPage';
+import PenilaianPage from '../pages/PenilaianPage';
+import DetailModulPage from '../pages/DetailModulPage';
 
 function MainRouter(){
     return (
@@ -25,6 +27,10 @@ function MainRouter(){
                 <Route path="/profile" component={ProfilePage} exact/>
                 <Route path="/dashboard" component={DashboardPage} exact/>
                 <Route path="/eventpage" component={EventPage} exact/>
+                <Route path="/about" component={AboutPage} exact/>
+                <Route path="/penilaian" component={PenilaianPage} exact/>
+                <Route path="/detailmodul" component={DetailModulPage} exact/>
+                
             </Switch>
             <Footer></Footer>
         </Router>

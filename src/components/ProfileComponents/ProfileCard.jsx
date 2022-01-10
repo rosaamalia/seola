@@ -20,7 +20,7 @@ function ProfileCard() {
                             Edit Profile
                         </div>
                     )}>
-                        <Link to="/" className="edit-button">
+                        <Link to="/editprofile" className="edit-button">
                             <BiEdit></BiEdit>
                         </Link>
                     </Tooltip>
@@ -31,15 +31,15 @@ function ProfileCard() {
                         <h3>Bucky Montana Esmeralda</h3>
                         <p>buckymontas@mail.com</p>
                         <Row className="justify-content-center gap-2">
-                            <div className="bidang-seni col-5 gap-1">
+                            <div className="bidang-seni col-auto gap-1">
                                 <IoRibbon></IoRibbon>
                                 <span>Seni Lukis</span>
                             </div>
-                            <div className="oranye-bg col-5 gap-1">
+                            <div className="oranye-bg col-auto gap-1">
                                 <IoStar style={{ color: '#F76761' }}></IoStar>
                                 <span>0 Point</span>
                             </div>
-                            <div className="oranye-bg col-5 gap-1">
+                            <div className="oranye-bg col-auto gap-1">
                                 <span>Ranking: -</span>
                             </div>
                         </Row>

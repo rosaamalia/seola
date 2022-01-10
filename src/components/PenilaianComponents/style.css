@@ -1,0 +1,15 @@
+.kolom-2 {
+    background: #FFF8EF;
+    border-radius: 10px;
+}
+
+.isi {
+    background: white;
+    border-radius: 10px;
+}
+
+.unduh-ikon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.25rem;
+}
