@@ -14,6 +14,7 @@ import EventPage from '../pages/EventPage';
 import AboutPage from '../pages/AboutPage';
 import PenilaianPage from '../pages/PenilaianPage';
 import DetailModulPage from '../pages/DetailModulPage';
+import DetailTugasPage from '../pages/DetailTugasPage';
 import PortofolioPage from "../pages/PortofolioPage";
 import ModulPage from "../pages/ModulPage";
 import ErrorPage from "../pages/ErrorPage";
@@ -33,6 +34,7 @@ function MainRouter(){
                 <Route path="/about" component={AboutPage} exact/>
                 <Route path="/penilaian" component={PenilaianPage} exact/>
                 <Route path="/detailmodul" component={DetailModulPage} exact/>
+                <Route path="/detailtugas" component={DetailTugasPage} exact/>
                 <Route path="/portofolio" component={PortofolioPage} exact />
                 <Route path="/modul" component={ModulPage} exact />
                 <Route component={ErrorPage} exact />
