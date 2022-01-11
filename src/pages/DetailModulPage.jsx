@@ -1,12 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import DetailModul from "../components/DetailModule/DetailModul";
+import DetailModulVideo from "../components/DetailModule/DetailModul";
 
 function DetailModulPage(){
     return (
         <React.Fragment>
             <Container fluid>
-                <DetailModul/>
+                <DetailModulVideo/>
             </Container>
         </React.Fragment>
     )

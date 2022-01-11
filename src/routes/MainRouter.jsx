@@ -14,6 +14,7 @@ import EventPage from '../pages/EventPage';
 import AboutPage from '../pages/AboutPage';
 import PenilaianPage from '../pages/PenilaianPage';
 import DetailModulPage from '../pages/DetailModulPage';
+import DetailModulTektual from "../components/DetailModule/DetailModulTektual"
 
 function MainRouter(){
     return (
@@ -30,6 +31,7 @@ function MainRouter(){
                 <Route path="/about" component={AboutPage} exact/>
                 <Route path="/penilaian" component={PenilaianPage} exact/>
                 <Route path="/detailmodul" component={DetailModulPage} exact/>
+                <Route path="/detailmodul/modultekstual" component={DetailModulTektual} exact/>
                 
             </Switch>
             <Footer></Footer>
