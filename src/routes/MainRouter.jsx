@@ -15,6 +15,7 @@ import AboutPage from '../pages/AboutPage';
 import PenilaianPage from '../pages/PenilaianPage';
 import DetailModulPage from '../pages/DetailModulPage';
 import PortofolioPage from "../pages/PortofolioPage";
+import ModulPage from "../pages/ModulPage;
 
 function MainRouter(){
     return (
@@ -32,6 +33,7 @@ function MainRouter(){
                 <Route path="/penilaian" component={PenilaianPage} exact/>
                 <Route path="/detailmodul" component={DetailModulPage} exact/>
                 <Route path="/portofolio" component={PortofolioPage} exact />
+                <Route path="/modul" component={ModulPage} exact />
                 
             </Switch>
             <Footer></Footer>
