@@ -15,8 +15,8 @@ import AboutPage from '../pages/AboutPage';
 import PenilaianPage from '../pages/PenilaianPage';
 import DetailModulPage from '../pages/DetailModulPage';
 import PortofolioPage from "../pages/PortofolioPage";
-import ModulPage from "../pages/ModulPage;
-import ErrorPage from "../pages/ErrorPage
+import ModulPage from "../pages/ModulPage";
+import ErrorPage from "../pages/ErrorPage";
 
 function MainRouter(){
     return (
