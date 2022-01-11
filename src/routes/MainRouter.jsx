@@ -15,6 +15,9 @@ import AboutPage from '../pages/AboutPage';
 import PenilaianPage from '../pages/PenilaianPage';
 import DetailModulPage from '../pages/DetailModulPage';
 import DetailModulTektual from "../components/DetailModule/DetailModulTektual"
+import PortofolioPage from "../pages/PortofolioPage";
+import ModulPage from "../pages/ModulPage";
+import ErrorPage from "../pages/ErrorPage";
 
 function MainRouter(){
     return (
@@ -32,6 +35,9 @@ function MainRouter(){
                 <Route path="/penilaian" component={PenilaianPage} exact/>
                 <Route path="/detailmodul" component={DetailModulPage} exact/>
                 <Route path="/detailmodul/modultekstual" component={DetailModulTektual} exact/>
+                <Route path="/portofolio" component={PortofolioPage} exact />
+                <Route path="/modul" component={ModulPage} exact />
+                <Route component={ErrorPage} exact />
                 
             </Switch>
             <Footer></Footer>
