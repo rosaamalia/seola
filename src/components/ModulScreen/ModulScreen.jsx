@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
-import "./ModulScreen.css";
+import "./style.css";
 import kuas from "../../images/kuas.svg";
 import bocah from "../../images/bocah.svg";
 import mentor from "../../images/mentor.svg";
