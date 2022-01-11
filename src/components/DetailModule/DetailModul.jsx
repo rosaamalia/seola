@@ -6,7 +6,7 @@ import RightSection from "./Right_Section/RightSection";
 import { Row,Col } from "react-bootstrap";
 import { ButtonNext, ButtonDetailTugas } from "./Button";
 
-function DetailModul() {
+function DetailModulVideo() {
   return (
     <React.Fragment>
       <Row>
@@ -33,4 +33,4 @@ function DetailModul() {
   );
 }
 
-export default DetailModul;
+export default DetailModulVideo;
