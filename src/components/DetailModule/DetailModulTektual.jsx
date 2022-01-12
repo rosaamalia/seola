@@ -4,7 +4,9 @@ import "./stylemodul.css"
 import Textual from "./Tekstual/Textual";
 import RightSection from "./Right_Section/RightSection";
 import { Row,Col } from "react-bootstrap";
-import { ButtonNext, ButtonDetailTugas } from "./Button";
+import { ButtonDetailTugas, ButtonBack } from "./Button";
+import { Link } from 'react-router-dom';
+import { BsArrowLeft } from "react-icons/bs";
 
 function DetailModulVideo() {
   return (
@@ -13,7 +15,10 @@ function DetailModulVideo() {
         <Col lg={9} md={9} className="sectionleft">
           <p className="title">Modul 2 Paradigma Pendidikan Kontekstual</p>
           <Textual></Textual>
-          <ButtonNext>Selanjutnya</ButtonNext>
+          <Link to="/detailmodul">
+            <ButtonBack><BsArrowLeft style={{fontSize: "1.5em"}}/> SEBELUMNYA</ButtonBack>
+          </Link>
+          
         </Col>
         <Col lg={3} md={3} style={{marginTop:55}} className="sectionright">
           <h4 style={{marginLeft:69,marginTop: 50, marginBottom: 30, fontWeight: "bold"}}>Daftar isi</h4>
@@ -25,7 +30,11 @@ function DetailModulVideo() {
             textAlign: "center"
           }}>Uji pemahaman dan eksplorasi lebih jauh dengan tugas</p>
           <br/>
-          <ButtonDetailTugas>Detail Tugas</ButtonDetailTugas>
+          <Link to="/detailtugas">
+            <ButtonDetailTugas>
+              Detail Tugas
+            </ButtonDetailTugas>
+          </Link>
         </Col>
       </Row>
       
