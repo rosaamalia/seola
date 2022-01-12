@@ -1,122 +1,119 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Card, ProgressBar } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 import "./style.css";
 import kuas from "../../images/kuas.svg";
 import bocah from "../../images/bocah.svg";
 import mentor from "../../images/mentor.svg";
+import modul1 from '../../images/modul/modul-1.jpg';
 import { GiTwoShadows, GiAbdominalArmor, GiPaintBrush } from "react-icons/gi";
 
 const ModulScreen = () => {
+  const modul = [
+    {
+      nama: 'Modul 1: Pandangan Filosofis Ki Hajar Dewantara dan Driyarkara tentang Pendidikan',
+      progres: 50,
+      gambar: 'images/modul/modul-1.jpg',
+      status_progres: 'PROGRES'
+    },
+    {
+      nama: 'Modul 2: Paradigma Pendidikan Kontekstual',
+      progres: 0,
+      gambar: 'images/modul/modul-1.jpg',
+      status_progres: 'BELUM'
+    },
+    {
+      nama: 'Modul 3: Transformasi Peran Guru',
+      progres: 0,
+      gambar: 'images/modul/modul-1.jpg',
+      status_progres: 'BELUM'
+    }
+  ]
+
   return (
     <Container className="background-page" fluid>
       <Row className="row-screen">
-        <Col className="columns0" lg={8}>
-          {/* <div classname="ms"> */}
-          <div className="ms-wrapper">
-            <h1 className="ms-wrapper-title">Body Painting</h1>
-            <p className="ms-wrapper-text">
-              Lukisan tubuh adalah sebuah bentuk seni rupa tubuh dimana karya
-              seni dilukis langsung pada kulit manusia. Tak seperti tato dan
-              bentuk seni rupa tubuh lainnya, lukisan tubuh bersifat temporer,
-              bertahan selama beberapa jam atau terkadang beberapa pekan.
-            </p>
-            <div className="ms-profile">
-              <img
-                src={mentor}
-                classname="msimage"
-                alt="avatar"
-                // style={{ width: "100%", height: "50px" }}
-              ></img>
-              <h2 className="ms-profile-title">Mentor</h2>
-              <h3 className="ms-profile-name">Tom Holland Sucipto</h3>
+        <Container>
+          <Container>
+          <Col md={8}>
+            {/* <div classname="ms"> */}
+            <div className="ms-wrapper">
+              <h1 className="ms-wrapper-title">Body Painting</h1>
+              <p className="ms-wrapper-text">
+                Lukisan tubuh adalah sebuah bentuk seni rupa tubuh dimana karya
+                seni dilukis langsung pada kulit manusia. Tak seperti tato dan
+                bentuk seni rupa tubuh lainnya, lukisan tubuh bersifat temporer,
+                bertahan selama beberapa jam atau terkadang beberapa pekan.
+              </p>
+              <div className="ms-profile">
+                <img
+                  src={mentor}
+                  className="ms-image"
+                  alt="avatar"
+                  // style={{ width: "100%", height: "50px" }}
+                ></img>
+                <Col className="d-flex flex-column ms-3">
+                  <span className="ms-profile-title">MENTOR</span>
+                  <span className="ms-profile-name">Tom Holland</span>
+                </Col>
+              </div>
             </div>
-          </div>
-          {/* </div> */}
-        </Col>
-
-        <Col className="columns0" lg={4}>
-          <div>
-            <img
-              src={kuas}
-              className="msimage1"
-              alt="gambarkuas"
-              // style={{ height: "100%" }}
-            ></img>
-            <img
-              src={bocah}
-              className="msimage2"
-              alt="gambaranak"
-              // style={{ width: "100%" }}
-            ></img>
-          </div>
-        </Col>
+            {/* </div> */}
+          </Col>
+          </Container>
+        </Container>
       </Row>
 
       <Row className="rows">
-        <Col className="columns1" lg={6}>
-          <h5 className="i-title">Daftar Modul</h5>
-          <div className="i-bor">
-            <GiTwoShadows className="i-bor-img"></GiTwoShadows>
-            <div className="wrapper">
-              <div className="i-text">
-                <h5>Modul I Mengenal Body Painting</h5>
-              </div>
-              <div className="i-load">
-                <p>
-                  ini proses <span>50%</span>
-                </p>
-              </div>
-              <div className="i-btn">
-                <Button>LANJUTKAN</Button>
-              </div>
-            </div>
-          </div>
+        <Container>
+          <Container className="gap-xl-5 d-flex justify-content-center align-items-start">
+            <Col xl={7} className="col-12 align-self-start mt-5">
+              <h3 className="mb-3">Daftar Modul</h3>
 
-          <div className="i-bor">
-            <GiAbdominalArmor className="i-bor-img"></GiAbdominalArmor>
-            <div className="wrapper">
-              <div className="i-text">
-                <h5>Modul II Keragaman Body Painting</h5>
-              </div>
-              <div className="i-load">
-                <p>
-                  ini proses <span>0%</span>
-                </p>
-              </div>
-              <div className="i-btn">
-                <Button style={{ backgroundColor: "#CCCCCC" }}>
-                  BELUM BISA DIAKSES
-                </Button>
-              </div>
-            </div>
-          </div>
+              {modul.map((modul) => (
+                <Card className="mb-5 p-0 d-flex justify-content-center align-items-between flex-row" style={{ width: '100%', height: 'auto' }}>
+                    <Row style={{ width: '100%', height: 'auto' }}>
+                        <Col md={4} className="d-flex p-0 m-0">
+                            <img className="img-kelas rounded-md-start vw-100" src={modul.gambar} />
+                        </Col>
+                        <Col md={8} className="d-flex flex-column justify-content-center p-3 gap-3" style={{ textAlign: 'left' }}>
+                            <h5 className="m-0 p-0">{modul.nama}</h5>
 
-          <div className="i-bor">
-            <GiPaintBrush className="i-bor-img"></GiPaintBrush>
-            <div className="wrapper">
-              <div className="i-text">
-                <h5>Modul III Practice Your Skill</h5>
-              </div>
-              <div className="i-load">
-                <p>
-                  ini proses <span>0%</span>
-                </p>
-              </div>
-              <div className="i-btn">
-                <Button style={{ backgroundColor: "#CCCCCC" }}>
-                  BELUM BISA DIAKSES
-                </Button>
-              </div>
-            </div>
-          </div>
-        </Col>
-        <Col className="columns2" lg={6}>
-          <h5 className="p-title">Tugas yang Akan Datang</h5>
-          <div className="p-bor">
-            <h5>Tugas I: Perkenalan Body Painting</h5>
-            <p>Modul I Mengenai Body Painting</p>
-          </div>
-        </Col>
+                            <ProgressBar now={modul.progres} label={modul.progres+"%"}></ProgressBar>
+                            {modul.status_progres=="PROGRES" || modul.status_progres=="SELESAI"
+                              ?
+                              <div className="button-selengkapnya">
+                                  <Link to="/modul" className="link-selengkapnya">LANJUTKAN</Link>
+                              </div>
+                              :
+                              <div className="button-selengkapnya" style={{ background: "#CCCCCC" }}>
+                                  <Link to="/modul" className="link-selengkapnya">BELUM DAPAT DIAKSES</Link>
+                              </div>
+                             }
+                        </Col>
+                    </Row>
+                </Card>
+              ))}
+
+            </Col>
+
+            <Col xl={5} className="mt-5 d-xl-block">
+              <Card className="mb-5 py-4 d-flex justify-content-center align-items-between flex-column" style={{ width: '100%', height: 'auto' }}>
+                  <Col>
+                  <h3 className='mb-4' style={{ textAlign: 'center' }}>Tugas yang akan datang</h3>
+
+                  <Col className="mx-0 py-3 px-5" style={{ background: '#345CBB1A' }}>
+                      <h5>Tugas 1: Mengenal Body Painting</h5>
+                      <p>Modul 1: Mengenal Body Painting</p>
+                      <div className="button-selengkapnya">
+                          <Link to="/modul" className="link-selengkapnya px-1">DETAIL TUGAS</Link>
+                      </div>
+                  </Col>
+                  </Col>
+              </Card>
+            </Col>
+          </Container>
+        </Container>
       </Row>
     </Container>
   );
