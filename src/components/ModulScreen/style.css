@@ -56,12 +56,11 @@
   /* padding: 100px; */
 }
 
-.rows {
-  /* border: 2px solid rebeccapurple; */
+/* .rows {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .i-title {
   font-size: 20px;

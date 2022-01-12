@@ -35,7 +35,7 @@ const ModulScreen = () => {
       <Row className="row-screen">
         <Container>
           <Container>
-          <Col md={8}>
+          <Col lg={8}>
             {/* <div classname="ms"> */}
             <div className="ms-wrapper">
               <h1 className="ms-wrapper-title">Body Painting</h1>
@@ -64,57 +64,57 @@ const ModulScreen = () => {
         </Container>
       </Row>
 
-      <Row className="rows">
         <Container>
-          <Container className="gap-xl-5 d-flex justify-content-center align-items-start">
-            <Col xl={7} className="col-12 align-self-start mt-5">
-              <h3 className="mb-3">Daftar Modul</h3>
+          <Container>
+            <Row className="flex-column flex-lg-row">
+                  <Col xl={7} className="col-12 align-self-start mt-5">
+                    <h3 className="mb-3">Daftar Modul</h3>
 
-              {modul.map((modul) => (
-                <Card className="mb-5 p-0 d-flex justify-content-center align-items-between flex-row" style={{ width: '100%', height: 'auto' }}>
-                    <Row style={{ width: '100%', height: 'auto' }}>
-                        <Col md={4} className="d-flex p-0 m-0">
-                            <img className="img-kelas rounded-md-start vw-100" src={modul.gambar} />
-                        </Col>
-                        <Col md={8} className="d-flex flex-column justify-content-center p-3 gap-3" style={{ textAlign: 'left' }}>
-                            <h5 className="m-0 p-0">{modul.nama}</h5>
+                    {modul.map((modul) => (
+                      <Card className="mb-5 p-0 d-flex justify-content-center align-items-between flex-row" style={{ width: '100%', height: 'auto' }}>
+                          <Row style={{ width: '100%', height: 'auto' }}>
+                              <Col md={4} className="d-flex p-0 m-0">
+                                  <img className="img-kelas rounded-md-start vw-100" src={modul.gambar} />
+                              </Col>
+                              <Col md={8} className="d-flex flex-column justify-content-center p-3 gap-3" style={{ textAlign: 'left' }}>
+                                  <h5 className="m-0 p-0">{modul.nama}</h5>
 
-                            <ProgressBar now={modul.progres} label={modul.progres+"%"}></ProgressBar>
-                            {modul.status_progres=="PROGRES" || modul.status_progres=="SELESAI"
-                              ?
-                              <div className="button-selengkapnya">
-                                  <Link to="/modul" className="link-selengkapnya">LANJUTKAN</Link>
-                              </div>
-                              :
-                              <div className="button-selengkapnya" style={{ background: "#CCCCCC" }}>
-                                  <Link to="/modul" className="link-selengkapnya">BELUM DAPAT DIAKSES</Link>
-                              </div>
-                             }
-                        </Col>
-                    </Row>
-                </Card>
-              ))}
+                                  <ProgressBar now={modul.progres} label={modul.progres+"%"}></ProgressBar>
+                                  {modul.status_progres=="PROGRES" || modul.status_progres=="SELESAI"
+                                    ?
+                                    <div className="button-selengkapnya">
+                                        <Link to="/modul" className="link-selengkapnya">LANJUTKAN</Link>
+                                    </div>
+                                    :
+                                    <div className="button-selengkapnya" style={{ background: "#CCCCCC" }}>
+                                        <Link to="/modul" className="link-selengkapnya">BELUM DAPAT DIAKSES</Link>
+                                    </div>
+                                  }
+                              </Col>
+                          </Row>
+                      </Card>
+                    ))}
 
-            </Col>
-
-            <Col xl={5} className="mt-5 d-xl-block">
-              <Card className="mb-5 py-4 d-flex justify-content-center align-items-between flex-column" style={{ width: '100%', height: 'auto' }}>
-                  <Col>
-                  <h3 className='mb-4' style={{ textAlign: 'center' }}>Tugas yang akan datang</h3>
-
-                  <Col className="mx-0 py-3 px-5" style={{ background: '#345CBB1A' }}>
-                      <h5>Tugas 1: Mengenal Body Painting</h5>
-                      <p>Modul 1: Mengenal Body Painting</p>
-                      <div className="button-selengkapnya">
-                          <Link to="/modul" className="link-selengkapnya px-1">DETAIL TUGAS</Link>
-                      </div>
                   </Col>
+
+                  <Col xl={5} className="mt-3 mt-lg-5 d-xl-block">
+                    <Card className="mb-5 py-4 d-flex justify-content-center align-items-between flex-column" style={{ width: '100%', height: 'auto' }}>
+                        <Col>
+                        <h3 className='mb-4' style={{ textAlign: 'center' }}>Tugas yang akan datang</h3>
+
+                        <Col className="mx-0 py-3 px-5" style={{ background: '#345CBB1A' }}>
+                            <h5>Tugas 1: Mengenal Body Painting</h5>
+                            <p>Modul 1: Mengenal Body Painting</p>
+                            <div className="button-selengkapnya">
+                                <Link to="/modul" className="link-selengkapnya px-1">DETAIL TUGAS</Link>
+                            </div>
+                        </Col>
+                        </Col>
+                    </Card>
                   </Col>
-              </Card>
-            </Col>
+            </Row>
           </Container>
         </Container>
-      </Row>
     </Container>
   );
 };
