@@ -3,7 +3,11 @@ import { Col, Row, Card } from 'react-bootstrap'
 import './style.css'
 import RightSection from '../DetailModule/Right_Section/RightSection'
 import styled from 'styled-components'
-import { ButtonDetailTugas } from "../DetailModule/Button";
+import { ButtonDetailTugas,ButtonUpload, ButtonBack } from "../DetailModule/Button";
+import { VscCircleFilled } from 'react-icons/vsc' 
+import { MdUploadFile } from 'react-icons/md'
+import { BsArrowLeft } from 'react-icons/bs'
+import { Link } from 'react-router-dom'
 
 
 const Title = styled.div`
@@ -14,7 +18,17 @@ const Title = styled.div`
 `;
 
 const Desc = styled.div`
-    color
+    color: black;
+    font-size: 12px;
+    margin-left: 120px;
+
+`
+
+const Tagline = styled.div`
+    color: black;
+    font-size: 13px;
+    margin-left: 120px;
+
 `
 
 export const DetailTugas = () => {
@@ -23,7 +37,7 @@ export const DetailTugas = () => {
         <Row>
             <Col lg={8} md={7} style={{marginTop:100}}>
                 <Title>
-                    Tugas: Perkenalan Body Painting
+                    Tugas: Modul 2 Paradigma Pendidikan Kontekstual
                 </Title>
                 <Card style={{ 
                     width: '18rem', 
@@ -45,6 +59,13 @@ export const DetailTugas = () => {
                     marginTop : 20,
                     fontWeight: "bold" 
                 }}>Kriteria</p>
+                <Desc><VscCircleFilled/> Membuat karya dasar mengenai pendidikan</Desc>
+                <Desc><VscCircleFilled/> Karya 100% orisinil karya sendiri</Desc>
+                <br/>
+                <Tagline>Terus berimajinasi dan berkarya</Tagline>
+                <ButtonUpload>
+                    <MdUploadFile style={{color:"white", fontSize:"1.5em"}}/> UNGGAH TUGASMU DI SINI
+                </ButtonUpload>
             </Col>
             <Col lg={4} md={4} style={{marginTop:55}} className="sectionright">
                 <h4 style={{marginLeft:69,marginTop: 50, marginBottom: 30, fontWeight: "bold"}}>Daftar isi</h4>
@@ -56,8 +77,19 @@ export const DetailTugas = () => {
                     textAlign: "center"
                 }}>Uji pemahaman dan eksplorasi lebih jauh dengan tugas</p>
                 <br/>
-                <ButtonDetailTugas>Detail Tugas</ButtonDetailTugas>
+                <Link to="/detailtugas">
+                    <ButtonDetailTugas>
+                    Detail Tugas
+                    </ButtonDetailTugas>
+                </Link>
             </Col>
+        </Row>
+        <Row>
+            <Col lg={4}>
+                <Link to="/detailmodul">
+                    <ButtonBack><BsArrowLeft/> SEBELUMNYA</ButtonBack>
+                </Link>
+            </Col> 
         </Row>
         </>
     )
