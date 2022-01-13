@@ -2,9 +2,9 @@ import React, {useState} from "react";
 import './style.css';
 import { Container, Row, Col, Form, Button} from "react-bootstrap";
 import Happy from "../gambarLogin/Happy";
-import { validEmail, validPassword } from "../../regis/form sign up/regex"
-
-
+import { validEmail, validPassword } from "../../regis/form sign up/regex";
+import { ToastContainer, toast } from 'react-toastify';
+import api from '../../../../services/api';
 
 function FormLogin() {
     const [email, setEmail] = useState('');
@@ -13,16 +13,36 @@ function FormLogin() {
     function handleFormSubmit(e){
         e.preventDefault();
 
-        if(!validEmail.test(email) || !validPassword.test(password)){
-            alert('Salah masukan email dan/atau password');
+        if(!email || !password){
+            toast.error('Mohon isi form terlebih dahulu dengan benar')
+        } else if(!validEmail.test(email)) {
+            toast.error('Email tidak valid')
+        } else if(!validPassword.test(password)) {
+            toast.error('Password minimal harus terdiri dari 8 karakter dengan 1 huruf kapital, simbol dan angka')
         } else {
-            alert('Berhasil Login')
-            console.log("Success Login")
+            api.post('/auth/login', {
+                email: email,
+                password: password
+            })
+            .then((res) => {
+                toast.success('Login berhasil')
+                console.log(res)
+            })
+            .catch((err) => {
+                if(err == 'Error: Request failed with status code 404') {
+                    toast.error('User tidak ada');
+                } else {
+                    toast.error('Mohon isi form terlebih dahulu dengan benar');
+                }
+                
+                console.log(`${err}`);
+            });
         }
     }
 
     return (
             <Container style={{marginTop: 130 ,marginBottom: 50}}>
+                <ToastContainer/>
                 <Row>
                     <Col md={6} className="happy">
                         <Happy/>
