@@ -11,7 +11,7 @@ const Error = () => {
           <img
             src={Error404}
             alt="Error"
-            classname="error"
+            className="error"
             style={{ width: "100%", height: "100%" }}
           ></img>
         </Col>

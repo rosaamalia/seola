@@ -1,12 +1,12 @@
-import React from "react"
+import React from "react";
+import { Container } from "react-bootstrap";
 import RegistrasiComponent from "../components/regis login/regis/form sign up/Form"
 
 function RegisterPage() {
     return (
-        <React.Fragment>
+        <Container>
             <RegistrasiComponent/>
-        </React.Fragment>
-
+        </Container>
     )
 }
 

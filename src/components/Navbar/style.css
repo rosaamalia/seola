@@ -41,15 +41,6 @@
     background-color: #242A55;
 }
 
-.link-dropdown {
-    text-decoration: none;
-    color: black;
-}
-
-.link-dropdown:hover {
-    color: black;
-}
-
 .home {
     margin: 0 0.5rem 0.1rem 0;
 }

@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useContext } from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
 
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
@@ -20,7 +20,11 @@ import PortofolioPage from "../pages/PortofolioPage";
 import ModulPage from "../pages/ModulPage";
 import ErrorPage from "../pages/ErrorPage";
 
+import AuthContext from '../context/AuthContext';
+
 function MainRouter(){
+    const { loggedIn } = useContext(AuthContext);
+
     return (
         <Router>
             <Navbar></Navbar>
@@ -29,7 +33,9 @@ function MainRouter(){
                 <Route path="/register" component={RegisterPage} exact/>
                 <Route path="/login" component={LoginPage} exact/>
                 <Route path="/editprofile" component={EditProfile} exact/>
-                <Route path="/profile" component={ProfilePage} exact/>
+                <Route path="/profile" exact>
+                    {loggedIn.isLoggedIn ? <ProfilePage/> : <Redirect to="/" />}
+                </Route>
                 <Route path="/dashboard" component={DashboardPage} exact/>
                 <Route path="/eventpage" component={EventPage} exact/>
                 <Route path="/about" component={AboutPage} exact/>
