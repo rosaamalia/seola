@@ -2,7 +2,7 @@ import React,{useState, useEffect} from "react";
 import { Container, Row, Col, Form, Button , Dropdown} from "react-bootstrap";
 import GambarRegis from "../gambar section 1/gambar";
 import { validEmail, validPassword } from "./regex.jsx";
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import api from '../../../../services/api';
 
 function FormRegis() {
@@ -59,7 +59,6 @@ function FormRegis() {
     
     return (            
         <Container className="d-flex justify-content-center" style={{marginTop: 130 ,marginBottom: 50}}>
-            <ToastContainer />
             <Row>
                 <Col lg={6} className="d-none d-lg-block">
                     <GambarRegis/>
