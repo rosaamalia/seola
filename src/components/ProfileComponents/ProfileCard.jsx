@@ -14,7 +14,6 @@ import AuthContext from '../../context/AuthContext';
 
 function ProfileCard() {
     const { loggedIn } = useContext(AuthContext);
-    console.log(loggedIn)
 
     return ( 
         <React.Fragment>
