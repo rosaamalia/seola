@@ -6,7 +6,6 @@ import kuas from "../../images/kuas.svg";
 import bocah from "../../images/bocah.svg";
 import mentor from "../../images/mentor.svg";
 import modul1 from '../../images/modul/modul-1.jpg';
-import { GiTwoShadows, GiAbdominalArmor, GiPaintBrush } from "react-icons/gi";
 
 const ModulScreen = () => {
   const modul = [
@@ -83,11 +82,11 @@ const ModulScreen = () => {
                                   {modul.status_progres=="PROGRES" || modul.status_progres=="SELESAI"
                                     ?
                                     <div className="button-selengkapnya">
-                                        <Link to="/modul" className="link-selengkapnya">LANJUTKAN</Link>
+                                        <Link to="/detailmodul" className="link-selengkapnya">LANJUTKAN</Link>
                                     </div>
                                     :
                                     <div className="button-selengkapnya" style={{ background: "#CCCCCC" }}>
-                                        <Link to="/modul" className="link-selengkapnya">BELUM DAPAT DIAKSES</Link>
+                                        <Link className="link-selengkapnya">BELUM DAPAT DIAKSES</Link>
                                     </div>
                                   }
                               </Col>
