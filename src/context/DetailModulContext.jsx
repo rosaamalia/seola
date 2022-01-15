@@ -19,7 +19,7 @@ export const DetailModulProvider = props => {
     }, [])
 
     return (
-        <DetailModulContext.Provider value={{ modul }}>
+        <DetailModulContext.Provider value={{ modul, setModul }}>
             {props.children}
         </DetailModulContext.Provider>
     )

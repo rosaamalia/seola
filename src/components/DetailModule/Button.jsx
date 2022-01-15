@@ -51,6 +51,7 @@ export const ButtonUpload = styled.button`
     float: left;
     margin-left: 120px;
     margin-top: 30px;
+    width: auto;
 `
 
 export const ButtonBack = styled.button`
