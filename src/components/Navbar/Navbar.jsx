@@ -69,6 +69,10 @@ function NavigasiBar(){
                                                 Portofolio
                                             </NavDropdown.Item>
                                             <NavDropdown.Divider />
+                                            <NavDropdown.Item as={Link} to="/eventpage">
+                                                Event
+                                            </NavDropdown.Item>
+                                            <NavDropdown.Divider />
                                             <NavDropdown.Item>
                                                 <button onClick={logout} style={{ border: 'none', background: 'none', width: '100%', textAlign: 'left' }}>Keluar</button>
                                             </NavDropdown.Item>

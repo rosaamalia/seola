@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import MainRouter from "./routes/MainRouter";
+
 import AuthContext from './context/AuthContext';
+import { DetailModulProvider } from "./context/DetailModulContext";
 import api from './services/api';
 
 function App() {
@@ -39,9 +41,11 @@ function App() {
   return (
     <>
       <AuthContext.Provider value={{ loggedIn, setLoggedIn }}>
-        <MainRouter></MainRouter>
+        <DetailModulProvider>
+          <MainRouter></MainRouter>
+          <ToastContainer/>
+        </DetailModulProvider>
       </AuthContext.Provider>
-      <ToastContainer/>
     </>
   );
 }

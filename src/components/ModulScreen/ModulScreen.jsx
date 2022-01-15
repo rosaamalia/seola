@@ -1,33 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Row, Col, Button, Card, ProgressBar } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import "./style.css";
-import kuas from "../../images/kuas.svg";
-import bocah from "../../images/bocah.svg";
+
 import mentor from "../../images/mentor.svg";
-import modul1 from '../../images/modul/modul-1.jpg';
+
+import { DetailModulContext } from "../../context/DetailModulContext";
 
 const ModulScreen = () => {
-  const modul = [
-    {
-      nama: 'Modul 1: Pandangan Filosofis Ki Hajar Dewantara dan Driyarkara tentang Pendidikan',
-      progres: 50,
-      gambar: 'images/modul/modul-1.jpg',
-      status_progres: 'PROGRES'
-    },
-    {
-      nama: 'Modul 2: Paradigma Pendidikan Kontekstual',
-      progres: 0,
-      gambar: 'images/modul/modul-1.jpg',
-      status_progres: 'BELUM'
-    },
-    {
-      nama: 'Modul 3: Transformasi Peran Guru',
-      progres: 0,
-      gambar: 'images/modul/modul-1.jpg',
-      status_progres: 'BELUM'
-    }
-  ]
+  const { modul }= useContext(DetailModulContext);
 
   return (
     <Container className="background-page" fluid>
@@ -69,17 +50,17 @@ const ModulScreen = () => {
                   <Col xl={7} className="col-12 align-self-start mt-5">
                     <h3 className="mb-3">Daftar Modul</h3>
 
-                    {modul.map((modul) => (
+                    {modul.map((modul, index) => (
                       <Card className="mb-5 p-0 d-flex justify-content-center align-items-between flex-row" style={{ width: '100%', height: 'auto' }}>
                           <Row style={{ width: '100%', height: 'auto' }}>
                               <Col md={4} className="d-flex p-0 m-0">
-                                  <img className="img-kelas rounded-md-start vw-100" src={modul.gambar} />
+                                  <img className="img-kelas rounded-md-start vw-100" src={modul.modul.foto_modul} />
                               </Col>
                               <Col md={8} className="d-flex flex-column justify-content-center p-3 gap-3" style={{ textAlign: 'left' }}>
-                                  <h5 className="m-0 p-0">{modul.nama}</h5>
+                                  <h5 className="m-0 p-0">{modul.modul.nama_modul}</h5>
 
                                   <ProgressBar now={modul.progres} label={modul.progres+"%"}></ProgressBar>
-                                  {modul.status_progres=="PROGRES" || modul.status_progres=="SELESAI"
+                                  {index==0 || modul.status_progres=="PROGRES" || modul.status_progres=="SELESAI"
                                     ?
                                     <div className="button-selengkapnya">
                                         <Link to="/detailmodul" className="link-selengkapnya">LANJUTKAN</Link>

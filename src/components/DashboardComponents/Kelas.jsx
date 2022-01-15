@@ -1,12 +1,30 @@
-import React from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 import image from '../../images/dashboard-1.png';
 import modul1 from '../../images/modul/modul-1.jpg';
 import { Card, Row, Col, ProgressBar } from 'react-bootstrap';
 import { IoRibbon } from 'react-icons/io5';
+import { toast } from 'react-toastify';
+
+import AuthContext from '../../context/AuthContext';
+import api from '../../services/api';
 
 function Kelas() {
+    const { loggedIn } = useContext(AuthContext);
+    const [kelas, setKelas] = useState('');
+
+    useEffect(() => {
+        api.get(`/kelas/${loggedIn.data.bidang_seni_id}`)
+        .then((res) => {
+            setKelas(res.data)
+            console.log(kelas)
+        })
+        .catch((err) => {
+            toast.error(err)
+        })
+    }, [])
+
     return ( 
         <React.Fragment>
             <div className='banner'>
@@ -22,11 +40,11 @@ function Kelas() {
             <Card className="mb-5 p-0 d-flex justify-content-center align-items-between flex-row" style={{ width: '100%', height: 'auto' }}>
                 <Row style={{ width: '100%', height: 'auto' }}>
                     <Col md={4} className="d-flex p-0 m-0">
-                        <img className="img-kelas rounded-md-start vw-100" src="https://i.pinimg.com/564x/90/8d/80/908d80b06a22f18f1531067c2e89e2df.jpg" />
+                        <img className="img-kelas rounded-md-start vw-100" src={kelas.foto_thumbnail} />
                     </Col>
                     <Col md={8} className="d-flex flex-column justify-content-center p-3 gap-3" style={{ textAlign: 'left' }}>
                         <span><IoRibbon/> Kelasku</span>
-                        <h5 className="m-0 p-0">Body Painting</h5>
+                        <h5 className="m-0 p-0">{kelas.nama_kelas}</h5>
                         <ProgressBar now={30} label={'30%'}></ProgressBar>
                         <div className="button-selengkapnya">
                             <Link to="/modul" className="link-selengkapnya">SELENGKAPNYA</Link>

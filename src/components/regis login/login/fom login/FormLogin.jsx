@@ -57,7 +57,7 @@ function FormLogin() {
 
                 toast.success('Login berhasil')
                 console.log(loggedIn)
-                window.location.replace('/dashboard')
+                window.location.replace('/')
             })
             .catch((err) => {
                 if(err == 'Error: Request failed with status code 404') {
