@@ -1,15 +1,15 @@
 import React from "react"
 import ReactMarkdown from "react-markdown"
+import RehypeRaw from "rehype-raw"
+import RemarkGfm from 'remark-gfm'
 import './style.css'
 
-
-function Textual() {
+function Textual(props) {
 
     return(
-        <React.Fragment>
-            <ReactMarkdown className="markdown">***TEST***</ReactMarkdown>
-        </React.Fragment>
-        
+        <ReactMarkdown className="markdown" remarkPlugins={[RemarkGfm]} rehypePlugins={[RehypeRaw]}>
+            {props.isi}
+        </ReactMarkdown>
     )
     
 }

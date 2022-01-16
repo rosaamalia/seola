@@ -1,41 +1,84 @@
-import React from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Embed_Video/styles.css"
 import "./stylemodul.css"
 import {YoutubeEmbed} from "./Embed_Video/YoutubeVideoEmbed";
 import RightSection from "./Right_Section/RightSection";
 import { Row,Col } from "react-bootstrap";
-import { ButtonNext, ButtonDetailTugas } from "./Button";
-import { Link } from 'react-router-dom';
-import { BsArrowRight } from "react-icons/bs";
+import { ButtonNext, ButtonBack, ButtonDetailTugas } from "./Button";
+import { Link, useParams } from 'react-router-dom';
+import { BsArrowRight, BsArrowLeft } from "react-icons/bs";
+import { DetailModulContext } from "../../context/DetailModulContext";
+import api from '../../services/api';
 
 function DetailModulVideo() {
+  const { modul } = useContext(DetailModulContext);
+  const { id } = useParams();
+  const [semuaModul, setSemuaModul] = useState(modul);
+
+  function progres() {
+    const data = {
+      status_progres: 'PROGRES'
+    }
+
+    api.put(`/progres/status/${id}`, data)
+    .then((res) => {
+      console.log('Modul progres', res.data)
+    })
+    .catch((err) => {
+      console.log(err.response?.data?.message || err)
+    })
+  }
+
   return (
     <React.Fragment>
-      <Row>
-        <Col lg={8} md={8} className="sectionleft">
-          <p className="title">Video: Modul 2 Paradigma Pendidikan Kontekstual</p>
-          <YoutubeEmbed embedId="RJYwVOXwn08" />
-          <Link to="/detailmodul/modultekstual">
-            <ButtonNext>SELANJUTNYA <BsArrowRight style={{color: "white", fontSize:"1.5em"}}/></ButtonNext>
-          </Link>
-          
-        </Col>
-        <Col lg={4} md={4} style={{marginTop:55}} className="sectionright">
-          <h4 style={{marginLeft:69,marginTop: 50, marginBottom: 30, fontWeight: "bold"}}>Daftar isi</h4>
-          <hr style={{ width: '100%', backgroundColor: 'gray', margin: '1% 2%'}}></hr>
-          <RightSection />
-          <br/>
-          <p style={{
-            fontSize: 12,
-            textAlign: "center"
-          }}>Uji pemahaman dan eksplorasi lebih jauh dengan tugas</p>
-          <br/>
-          <Link to="/detailtugas">
-            <ButtonDetailTugas>
-              Detail Tugas
-            </ButtonDetailTugas>
-          </Link>
-        </Col>
+      <Row className="d-flex">
+        {semuaModul.map((modul) => (
+          <>
+          {modul.modul._id===id 
+            ?
+            <>
+            <Col md={8} className="sectionleft">
+              <p className="nama-modul">Video - {modul.modul.nama_modul}</p>
+              <YoutubeEmbed embedId={modul.modul.link_video} />
+              <Link to={`/modul`}>
+                <ButtonBack><BsArrowLeft style={{fontSize: "1.5em"}}/> KEMBALI</ButtonBack>
+              </Link>
+              <Link to={`/modul/${id}/teks`}>
+                <ButtonNext onClick={() => progres()}>SELANJUTNYA <BsArrowRight style={{color: "white", fontSize:"1.5em"}}/></ButtonNext>
+              </Link>
+            </Col>
+
+            <Col md={4} style={{marginTop:55}} className="sectionright">
+              <h4 style={{marginLeft:69,marginTop: 50, marginBottom: 30, fontWeight: "bold"}}>Daftar isi</h4>
+              <hr style={{ width: '100%', backgroundColor: 'gray', margin: '1% 2%'}}></hr>
+              <RightSection />
+              <br/>
+              <br/>
+              {
+                modul.modul.tugas!=undefined
+                ?
+                <>
+                <p style={{
+                  fontSize: 12,
+                  textAlign: "center"
+                }}>Uji pemahaman dan eksplorasi lebih jauh dengan tugas</p>
+                <Link to={`/modul/${id}/tugas`}>
+                  <ButtonDetailTugas>
+                    Detail Tugas
+                  </ButtonDetailTugas>
+                </Link>
+                </>
+                :
+                null
+              }
+            </Col>
+            </>
+            :
+              <></>
+          }
+          </>
+        ))}
+
       </Row>
       
     </React.Fragment>

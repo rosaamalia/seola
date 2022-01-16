@@ -1,6 +1,6 @@
 .row-screen {
   justify-content: start;
-  background-image: url('../../images/bidang/lukis.png');
+  /* background-image: url('../../images/bidang/lukis.png'); */
   background-repeat: no-repeat;
   background-size: cover;
 }
