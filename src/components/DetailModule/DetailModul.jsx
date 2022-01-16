@@ -43,7 +43,7 @@ function DetailModulVideo() {
               <Link to={`/modul`}>
                 <ButtonBack><BsArrowLeft style={{fontSize: "1.5em"}}/> KEMBALI</ButtonBack>
               </Link>
-              <Link to={`/modul/teks/${id}`}>
+              <Link to={`/modul/${id}/teks`}>
                 <ButtonNext onClick={() => progres()}>SELANJUTNYA <BsArrowRight style={{color: "white", fontSize:"1.5em"}}/></ButtonNext>
               </Link>
             </Col>
@@ -62,7 +62,7 @@ function DetailModulVideo() {
                   fontSize: 12,
                   textAlign: "center"
                 }}>Uji pemahaman dan eksplorasi lebih jauh dengan tugas</p>
-                <Link to={`/modul/tugas/${id}`}>
+                <Link to={`/modul/${id}/tugas`}>
                   <ButtonDetailTugas>
                     Detail Tugas
                   </ButtonDetailTugas>

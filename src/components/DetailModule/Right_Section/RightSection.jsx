@@ -12,7 +12,7 @@ function RightSection() {
         },
         {
             title: "Modul Tekstual",
-            path: `/modul/teks/${id}`
+            path: `/modul/${id}/teks`
         }
     ]
 

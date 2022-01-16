@@ -39,11 +39,11 @@ function MainRouter(){
                 <Route path="/dashboard" component={DashboardPage} exact/>
                 <Route path="/eventpage" component={EventPage} exact/>
                 <Route path="/about" component={AboutPage} exact/>
-                <Route path="/penilaian" component={PenilaianPage} exact/>
+                <Route path="/modul/:id/tugas/nilai" component={PenilaianPage} exact/>
                 <Route path="/modul" component={ModulPage} exact />
                 <Route path="/modul/:id" component={DetailModulPage} exact/>
-                <Route path="/modul/tugas/:id" component={DetailTugasPage} exact/>
-                <Route path="/modul/teks/:id" component={DetailModulTektual} exact/>
+                <Route path="/modul/:id/tugas" component={DetailTugasPage} exact/>
+                <Route path="/modul/:id/teks" component={DetailModulTektual} exact/>
                 <Route path="/portofolio" component={PortofolioPage} exact />
                 <Route component={ErrorPage} exact />
             </Switch>

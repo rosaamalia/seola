@@ -46,7 +46,7 @@ function DetailModulVideo() {
               </Link>
               {modul.modul.tugas!=undefined
                 ?
-                <Link to={`/modul/tugas/${id}`}>
+                <Link to={`/modul/${id}/tugas`}>
                   <ButtonNext onClick={() => progresSelesai()}>TUGAS <BsArrowRight style={{color: "white", fontSize:"1.5em"}}/></ButtonNext>
                 </Link>
                 :
@@ -70,7 +70,7 @@ function DetailModulVideo() {
                   fontSize: 12,
                   textAlign: "center"
                 }}>Uji pemahaman dan eksplorasi lebih jauh dengan tugas</p>
-                <Link to={`/modul/tugas/${id}`}>
+                <Link to={`/modul/${id}/tugas`}>
                   <ButtonDetailTugas>
                     Detail Tugas
                   </ButtonDetailTugas>
