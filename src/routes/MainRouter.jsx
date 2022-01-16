@@ -30,21 +30,41 @@ function MainRouter(){
             <Navbar></Navbar>
             <Switch>
                 <Route path="/" component={LandingPage} exact/>
-                <Route path="/register" component={RegisterPage} exact/>
-                <Route path="/login" component={LoginPage} exact/>
-                <Route path="/editprofile" component={EditProfile} exact/>
+                <Route path="/register" component={RegisterPage} exact>
+                    {loggedIn.isLoggedIn ? <Redirect to="/" /> : <RegisterPage/>}
+                </Route>
+                <Route path="/login" component={LoginPage} exact>
+                    {loggedIn.isLoggedIn ? <Redirect to="/" /> : <LoginPage/>}
+                </Route>
+                <Route path="/editprofile" exact>
+                    {loggedIn.isLoggedIn ? <EditProfile/> : <Redirect to="/" />}
+                </Route>
                 <Route path="/profile" exact>
                     {loggedIn.isLoggedIn ? <ProfilePage/> : <Redirect to="/" />}
                 </Route>
-                <Route path="/dashboard" component={DashboardPage} exact/>
+                <Route path="/dashboard" exact>
+                    {loggedIn.isLoggedIn ? <DashboardPage/> : <Redirect to="/" />}
+                </Route>
                 <Route path="/eventpage" component={EventPage} exact/>
                 <Route path="/about" component={AboutPage} exact/>
-                <Route path="/modul/:id/tugas/nilai" component={PenilaianPage} exact/>
-                <Route path="/modul" component={ModulPage} exact />
-                <Route path="/modul/:id" component={DetailModulPage} exact/>
-                <Route path="/modul/:id/tugas" component={DetailTugasPage} exact/>
-                <Route path="/modul/:id/teks" component={DetailModulTektual} exact/>
-                <Route path="/portofolio" component={PortofolioPage} exact />
+                <Route path="/modul/:id/tugas/nilai" component={PenilaianPage} exact>
+                    {loggedIn.isLoggedIn ? <PenilaianPage/> : <Redirect to="/" />}
+                </Route>
+                <Route path="/modul" exact>
+                    {loggedIn.isLoggedIn ? <ModulPage/> : <Redirect to="/" />}
+                </Route>
+                <Route path="/modul/:id" exact>
+                    {loggedIn.isLoggedIn ? <DetailModulPage/> : <Redirect to="/" />}
+                </Route>
+                <Route path="/modul/:id/tugas" exact>
+                    {loggedIn.isLoggedIn ? <DetailTugasPage/> : <Redirect to="/" />}
+                </Route>
+                <Route path="/modul/:id/teks" exact>
+                    {loggedIn.isLoggedIn ? <DetailModulTektual/> : <Redirect to="/" />}
+                </Route>
+                <Route path="/portofolio" component={PortofolioPage} exact>
+                    {loggedIn.isLoggedIn ? <PortofolioPage/> : <Redirect to="/" />}
+                </Route>
                 <Route component={ErrorPage} exact />
             </Switch>
             <Footer></Footer>

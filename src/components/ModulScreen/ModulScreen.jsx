@@ -113,7 +113,7 @@ const ModulScreen = () => {
                                 <h5>Tugas Modul {modul.modul.urutan_modul}</h5>
                                 <p>{modul.modul.nama_modul}</p>
                                 <div className="button-selengkapnya">
-                                    <Link to={`/modul/tugas/${modul.modul._id}`} className="link-selengkapnya px-1">DETAIL TUGAS</Link>
+                                    <Link to={`/modul/${modul.modul._id}/tugas`} className="link-selengkapnya px-1">DETAIL TUGAS</Link>
                                 </div>
                             </Col>
                             :

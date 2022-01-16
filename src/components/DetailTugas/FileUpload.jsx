@@ -11,6 +11,7 @@ function FileUpload() {
     const [show, setShow] = useState(false);
     const [tugasData, setTugasData] = useState();
     const { id } = useParams();
+    const history = useHistory();
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -44,6 +45,7 @@ function FileUpload() {
         api.put(`/progres/status/${id}`, data)
         .then((res) => {
           console.log('Modul selesai', res.data)
+          setShow(false)
         })
         .catch((err) => {
           console.log(err.response?.data?.message || err)
@@ -55,7 +57,7 @@ function FileUpload() {
         toast.error(err.response?.data?.message || err)
       })
 
-      setShow(false)
+      history.go(0)
     }
   
     return (
