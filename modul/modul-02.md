@@ -1,20 +1,37 @@
-# Modul 02 : Paradigma Pendidikan Kontekstual
+## Modul 02 : Paradigma Pendidikan Kontekstual
 
-## Orientasi Pendidikan hari ini
-Pendidikan yang berakhit untuk penguatan korporasi yang membuat mutu pendidikan menjadi turun karena konsep "Link & Match".
+<br/>
 
-## Paradigma Pembelajaran Kontekstual
-Mengembalikan model ekosistem pendidikan yang bertujuan sebagai pengalaman pembelajar dalam menemukan kebutuhan dan menentukan pencapaian.
+|||
+|--|:--|
+|![image](https://user-images.githubusercontent.com/68428942/149656844-279075a4-3ec8-43a3-a6da-ae071b82e9bb.png)|**Orientasi Pendidikan hari ini**<br/>Pendidikan yang berakhir untuk penguatan korporasi yang membuat mutu pendidikan menjadi turun karena konsep "Link & Match".|
 
-## Skema Pendidikan Kontekstual
-  - Dunia Memengaruhi subjek menentukan
-  - Kesadaran Otonom Siswa Mandiri
-  - Eksplorasi + Kreasi
-  - Aksi
-  - Refleksi
-  
-## Memahami siswa berkembang dengan dunianya
-Proses manusia menyempurnakan dirinya sebagai manusia dengan pendidikan
+<br/>
 
-## Siswa menentukan sendiri tujuan belajarannya
+|||
+|--|:--|
+|![image](https://user-images.githubusercontent.com/68428942/149656895-cda56064-c24f-4cae-9e48-27ad080c2d9b.png)|**Paradigma Pembelajaran Kontekstual**<br/>Mengembalikan model ekosistem pendidikan yang bertujuan sebagai pengalaman pembelajar dalam menemukan kebutuhan dan menentukan pencapaian.|
+
+<br/>
+
+### Skema Pendidikan Kontekstual
+
+![image](https://user-images.githubusercontent.com/68428942/149656947-8a453082-7e71-4028-8193-501aa5846625.png)
+
+![image](https://user-images.githubusercontent.com/68428942/149656929-2e42e7f3-860d-4931-963f-0ae361b7b35d.png)
+
+
+<br/>
+
+|||
+|--|:--|
+|![image](https://user-images.githubusercontent.com/68428942/149656974-a0e4b4f3-42e6-4235-9a6d-ea7d992422f1.png)|**Memahami siswa berkembang dengan dunianya**<br/>Proses manusia menyempurnakan dirinya sebagai manusia dengan pendidikan|
+
+<br/>
+
+### Siswa menentukan sendiri tujuan belajarannya
 Proses siswa menemukan tujuan pembelajarannya
+
+
+![image](https://user-images.githubusercontent.com/68428942/149657074-6ebc7845-4226-4634-aeec-1344cc892fff.png)
+
