@@ -138,7 +138,7 @@ function EditProfile(){
                             <Form.Group className="mb-4 col-md-12" controlId="jeniskelamin">
                                 <Form.Label>Jenis Kelamin</Form.Label>
                                 <Form.Select aria-label="Jenis Kelamin" className="px-4" type="text" placeholder="Jenis kelamin" style={{borderRadius: 30, textAlign: "left"}} onChange={(event) => setJenisKelamin(event.target.value)}>
-                                    <option>{jenisKelamin}</option>
+                                    <option>{jenisKelamin ? jenisKelamin : `Jenis Kelamin`}</option>
                                     <option value="Laki-laki">Laki - laki</option>
                                     <option value="Perempuan">Perempuan</option>
                                 </Form.Select>
