@@ -19,6 +19,7 @@ function NavigasiBar(){
             setLoggedIn({ isLoggedIn: false});
             localStorage.removeItem("token");
             api.defaults.headers.common["Authorization"] = undefined;
+            window.location.replace('/')
         })
         .catch((err) => {
             console.log(err)
@@ -58,18 +59,22 @@ function NavigasiBar(){
                                     <Nav className="d-flex justify-content-center align-items-center">
                                         <img className="navbar-profil" src={loggedIn.data.foto_profil}></img>
                                         <NavDropdown title={loggedIn.data.nama_depan + " " + loggedIn.data.nama_belakang} id="collasible-nav-dropdown" align="end" className="p-0 m-0 ms-2">
-                                            <NavDropdown.Item href="/profile">
+                                            <NavDropdown.Item as={Link} to="/profile">
                                                 Lihat Profil
                                             </NavDropdown.Item>
-                                            <NavDropdown.Item href="/editprofile">
+                                            <NavDropdown.Item as={Link} to="/editprofile">
                                                 Edit Profil
                                             </NavDropdown.Item>
-                                            <NavDropdown.Item href="/portofolio">
+                                            <NavDropdown.Item as={Link} to="/portofolio">
                                                 Portofolio
                                             </NavDropdown.Item>
                                             <NavDropdown.Divider />
+                                            <NavDropdown.Item as={Link} to="/eventpage">
+                                                Event
+                                            </NavDropdown.Item>
+                                            <NavDropdown.Divider />
                                             <NavDropdown.Item>
-                                                <button onClick={logout} style={{ border: 'none', background: 'none' }}>Keluar</button>
+                                                <button onClick={logout} style={{ border: 'none', background: 'none', width: '100%', textAlign: 'left' }}>Keluar</button>
                                             </NavDropdown.Item>
                                         </NavDropdown>
                                     </Nav>

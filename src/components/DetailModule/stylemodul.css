@@ -1,20 +1,24 @@
 .sectionright{
+    width: 100%;
     background-color: #E5F7FB ;
-    height: 70vh;
+    /* height: 70vh; */
 }
-.sectionleft .title{
+
+.sectionleft .nama-modul{
     margin-top: 120px;
     font-size: 20px;
     font-weight: bold;
+    margin-left: 100px;
 }
+
 @media (max-width: 1440px){
-    .title {
+    .nama-modul {
         margin-left: 100px;
     }
 }
 
 @media (max-width: 770px) {
-    .title {
+    .nama-modul {
         margin-left: 20px;
         font-size: 18px;
     }
@@ -22,7 +26,7 @@
 
 
 @media (max-width: 425px) {
-    .title {
+    .nama-modul {
         margin-left: 10px;
         font-size: 12px;
     }

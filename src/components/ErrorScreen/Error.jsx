@@ -1,29 +1,30 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./style.css";
 import Error404 from "../../images/error2.svg";
 import { Container, Row, Col, Nav, Button } from "react-bootstrap";
 
 const Error = () => {
   return (
-    <Container fluid="lg">
-      <Row className="rows">
-        <Col className="cols">
+    <Container fluid>
+      <Row className="d-flex justify-content-center align-items-center">
+        <Col className="col-6">
           <img
             src={Error404}
             alt="Error"
             className="error"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "80%" }}
           ></img>
         </Col>
-        <Col>
+        <Col className="col-6">
           <div className="desc">
             <h1>Whoops! Lost in Space</h1>
             <p>The page you're looking for isn't found :(</p>
             <p>We suggest you to back Home</p>
           </div>
-          <Nav.Link className="nav-link" href="/">
+          <Link className="nav-link p-0" to="/">
             <Button>HOME</Button>
-          </Nav.Link>
+          </Link>
         </Col>
       </Row>
     </Container>

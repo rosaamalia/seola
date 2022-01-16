@@ -1,9 +1,13 @@
 import React from "react";
 import Error from "../components/ErrorScreen/Error";
-// import { Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const ErrorPage = () => {
-  return <Error></Error>;
+  return (
+    <Container className="background-page my-5">
+      <Error></Error>
+    </Container>
+  );
 };
 
 export default ErrorPage;
