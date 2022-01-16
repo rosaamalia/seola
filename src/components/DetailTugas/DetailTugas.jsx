@@ -69,7 +69,9 @@ export const DetailTugas = () => {
                             marginTop : 20,
                             fontWeight: "bold" 
                         }}>Kriteria</p>
+                        <div style={{ marginRight: 100 }}>
                         <Tekstual isi={modul.modul.tugas}></Tekstual>
+                        </div>
                         <br/>
                         <Tagline>Terus berimajinasi dan berkarya</Tagline>
 
