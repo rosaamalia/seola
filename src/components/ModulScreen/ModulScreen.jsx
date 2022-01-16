@@ -17,6 +17,15 @@ const ModulScreen = () => {
   const [kelas, setKelas] = useState('');
 
   useEffect(() => {
+      api.get('/modul/progres')
+      .then((res) => {
+          setModul(res.data);
+      })
+      .catch((err) => {
+          console.log(err)
+          toast.error(err)
+      })
+
       api.get(`/kelas/${loggedIn.data.bidang_seni_id}`)
       .then((res) => {
           setKelas(res.data)
@@ -25,17 +34,7 @@ const ModulScreen = () => {
       .catch((err) => {
           toast.error(err)
       })
-  }, [])
 
-  useEffect(() => {
-    api.get('/modul/progres')
-    .then((res) => {
-        setModul(res.data);
-    })
-    .catch((err) => {
-        console.log(err)
-        toast.error(err)
-    })
   }, [])
 
   return (

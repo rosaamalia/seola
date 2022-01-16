@@ -57,7 +57,8 @@ function FileUpload() {
         toast.error(err.response?.data?.message || err)
       })
 
-      history.go(0)
+      
+      setShow(false)
     }
   
     return (
