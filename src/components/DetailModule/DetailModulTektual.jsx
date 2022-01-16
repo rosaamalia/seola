@@ -5,7 +5,7 @@ import Textual from "./Tekstual/Textual";
 import RightSection from "./Right_Section/RightSection";
 import { Row,Col } from "react-bootstrap";
 import { ButtonDetailTugas, ButtonBack, ButtonNext } from "./Button";
-import { Link, useParams, Redirect } from 'react-router-dom';
+import { Link, useParams, Redirect, useHistory } from 'react-router-dom';
 import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 import { DetailModulContext } from "../../context/DetailModulContext";
 import api from '../../services/api';
@@ -15,6 +15,7 @@ function DetailModulVideo() {
   const { modul } = useContext(DetailModulContext);
   const { id } = useParams();
   const [semuaModul, setSemuaModul] = useState(modul);
+  const history = useHistory();
 
   function progresSelesai() {
     const data = {
@@ -28,6 +29,8 @@ function DetailModulVideo() {
     .catch((err) => {
       console.log(err.response?.data?.message || err)
     })
+
+    history.push(`/modul`)
   }
 
   return (
@@ -50,7 +53,7 @@ function DetailModulVideo() {
                   <ButtonNext onClick={() => progresSelesai()}>TUGAS <BsArrowRight style={{color: "white", fontSize:"1.5em"}}/></ButtonNext>
                 </Link>
                 :
-                <Link to="/modul">
+                <Link>
                   <ButtonNext onClick={() => progresSelesai()}>SELESAI <BsArrowRight style={{color: "white", fontSize:"1.5em"}}/></ButtonNext>
                 </Link>
               }
