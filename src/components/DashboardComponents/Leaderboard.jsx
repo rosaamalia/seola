@@ -24,12 +24,12 @@ function Leaderboard() {
                         </div>
                     </Col>
                     <Col md={6} className="d-flex justify-content-start">
-                        <span className="leaderboard-nama">Bae Joo-hyun</span>
+                        <span className="leaderboard-nama">Zahrotul Adillah</span>
                     </Col>
                     <Col md={3} className="p-0">
                         <div className="leaderboard-poin">
                             <IoStar></IoStar>
-                            <span>100 Poin</span>
+                            <span>360 Poin</span>
                         </div>
                     </Col>
                 </Row>
@@ -46,12 +46,12 @@ function Leaderboard() {
                         </div>
                     </Col>
                     <Col md={6} className="d-flex justify-content-start">
-                        <span className="leaderboard-nama">Kim Ji-woo</span>
+                        <span className="leaderboard-nama">Nazhwa Ameera Hardy</span>
                     </Col>
                     <Col md={3} className="p-0">
                         <div className="leaderboard-poin">
                             <IoStar></IoStar>
-                            <span>100 Poin</span>
+                            <span>290 Poin</span>
                         </div>
                     </Col>
                 </Row>
@@ -68,12 +68,12 @@ function Leaderboard() {
                         </div>
                     </Col>
                     <Col md={6} className="d-flex justify-content-start">
-                        <span className="leaderboard-nama">Chou Tzu-yu</span>
+                        <span className="leaderboard-nama">Nurul Izzatil Ulum</span>
                     </Col>
                     <Col md={3} className="p-0">
                         <div className="leaderboard-poin">
                             <IoStar></IoStar>
-                            <span>100 Poin</span>
+                            <span>280 Poin</span>
                         </div>
                     </Col>
                 </Row>
@@ -88,12 +88,12 @@ function Leaderboard() {
                         </div>
                     </Col>
                     <Col md={6} className="d-flex justify-content-start">
-                        <span className="leaderboard-nama">Oh Seung-hee</span>
+                        <span className="leaderboard-nama">Amanda Rozi Kurnia</span>
                     </Col>
                     <Col md={3} className="p-0">
                         <div className="leaderboard-poin">
                             <IoStar></IoStar>
-                            <span>100 Poin</span>
+                            <span>250 Poin</span>
                         </div>
                     </Col>
                 </Row>
@@ -108,12 +108,12 @@ function Leaderboard() {
                         </div>
                     </Col>
                     <Col md={6} className="d-flex justify-content-start">
-                        <span className="leaderboard-nama">Jang Ye-eun</span>
+                        <span className="leaderboard-nama">Lathifa Itqonina</span>
                     </Col>
                     <Col md={3} className="p-0">
                         <div className="leaderboard-poin">
                             <IoStar></IoStar>
-                            <span>100 Poin</span>
+                            <span>250 Poin</span>
                         </div>
                     </Col>
                 </Row>
