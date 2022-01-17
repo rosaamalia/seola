@@ -4,6 +4,7 @@ import './style.css';
 import { Card } from 'react-bootstrap';
 import ModalImage from 'react-modal-image';
 import api from '../../services/api';
+import error from '../../services/error';
 import { toast } from "react-toastify";
 
 function PortofolioList() {
@@ -12,12 +13,13 @@ function PortofolioList() {
     useEffect(() => {
         api.get('/tugas/portofolio')
         .then((res) => {
-        setPortofolio(res.data)
-        console.log(res.data)
+            setPortofolio(res.data)
+            console.log(res.data)
         })
         .catch((err) => {
-        console.log(err)
-        toast.error(err.response?.data?.message || err)
+            error.handleError(err.response.status)
+            console.log(err)
+            toast.error(err.response.data.message)
         })
     }, [])
 

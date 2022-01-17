@@ -1,42 +1,11 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 import image from '../../images/dashboard-1.png';
-import modul1 from '../../images/modul/modul-1.jpg';
-import { Card, Row, Col, ProgressBar } from 'react-bootstrap';
+import { Container, Card, Row, Col, ProgressBar } from 'react-bootstrap';
 import { IoRibbon } from 'react-icons/io5';
-import { toast } from 'react-toastify';
 
-import AuthContext from '../../context/AuthContext';
-import { DetailModulContext } from "../../context/DetailModulContext";
-import api from '../../services/api';
-
-function Kelas() {
-    const { loggedIn } = useContext(AuthContext);
-    const { modul, setModul }= useContext(DetailModulContext);
-    const [kelas, setKelas] = useState('');
-
-    useEffect(() => {
-        api.get('/modul/progres')
-        .then((res) => {
-            setModul(res.data);
-        })
-        .catch((err) => {
-            console.log(err)
-            toast.error(err)
-        })
-  
-        api.get(`/kelas/${loggedIn.data.bidang_seni_id}`)
-        .then((res) => {
-            setKelas(res.data)
-            console.log(kelas)
-        })
-        .catch((err) => {
-            toast.error(err)
-        })
-  
-    }, [])
-
+function Kelas({modul, kelas}) {
     return ( 
         <React.Fragment>
             <div className='banner'>
@@ -100,7 +69,7 @@ function Kelas() {
                             <img className="img-kelas rounded-md-start vw-100" src={modul.modul.foto_modul} />
                         </Col>
                         <Col md={8} className="d-flex flex-column justify-content-center p-3 gap-3" style={{ textAlign: 'left' }}>
-                            <h5 className="m-0 p-0">{"Tugas " + modul.modul.urutan_modul + ": " + modul.modul.nama_modul}</h5>
+                            <h5 className="m-0 p-0">{"Tugas Modul " + modul.modul.urutan_modul}</h5>
                             <span>{modul.modul.nama_modul}</span>
                             <div className="button-selengkapnya">
                                 <Link to={`/modul/${modul.modul._id}/tugas`} className="link-selengkapnya">KERJAKAN</Link>

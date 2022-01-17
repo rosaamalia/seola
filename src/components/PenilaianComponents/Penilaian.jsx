@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import './style.css';
+import loader from '../../images/loader.gif';
 import { Card, Row, Col, Button, Container } from 'react-bootstrap';
 import { FiDownload } from 'react-icons/fi';
 import { IoStar } from 'react-icons/io5';
@@ -195,7 +196,10 @@ function Penilaian() {
             }
             </>
             :
-            <p>Mengambil data</p>
+            <Container className="min-vh-100 d-flex justify-content-center align-items-center flex-column">
+                <img src={loader} alt="loader"style={{  width: '5rem' }}></img>
+                <p className="p-0 m-0">Tunggu sebentar, sedang mengambil data</p>
+            </Container>
             }
 
             </Container>

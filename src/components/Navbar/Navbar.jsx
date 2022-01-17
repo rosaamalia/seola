@@ -3,23 +3,24 @@ import './style.css';
 import { Navbar, Nav, NavDropdown, Container, Button } from "react-bootstrap";
 import { ImArrowRight2 } from 'react-icons/im';
 import { FaHome } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import AuthContext from '../../context/AuthContext';
 import api from '../../services/api';
 
 function NavigasiBar(){
     const { loggedIn, setLoggedIn } = useContext(AuthContext);
+    const history = useHistory();
 
     function logout() {
         api.post('/auth/logout')
         .then((res) => {
             console.log(res.data)
+            history.push('/')
 
             setLoggedIn({ isLoggedIn: false});
             localStorage.removeItem("token");
             api.defaults.headers.common["Authorization"] = undefined;
-            window.location.replace('/')
         })
         .catch((err) => {
             console.log(err)
