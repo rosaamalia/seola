@@ -49,8 +49,9 @@ export const ButtonUpload = styled.button`
     color: white;
     padding: 1em 2em;
     float: left;
-    margin-left: 120px;
+    margin-left: 110px;
     margin-top: 30px;
+    width: auto;
 `
 
 export const ButtonBack = styled.button`
@@ -60,7 +61,7 @@ export const ButtonBack = styled.button`
     color: #FD643C;
     padding: 0.50em 4em;
     margin-bottom: 50px;
-    margin-left: 120px;
+    margin-left: 100px;
     float: left;
     cursor: pointer;
     font-weight: bold;

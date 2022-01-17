@@ -13,7 +13,6 @@
     top: 0;
 }
 
-
 @media (max-width: 770px) {
     .video-responsive {
         overflow: hidden;
