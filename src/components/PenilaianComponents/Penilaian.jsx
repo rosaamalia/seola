@@ -1,20 +1,53 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useContext, useEffect } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import './style.css';
+import loader from '../../images/loader.gif';
 import { Card, Row, Col, Button, Container } from 'react-bootstrap';
 import { FiDownload } from 'react-icons/fi';
 import { IoStar } from 'react-icons/io5';
+import { toast } from 'react-toastify';
+import ModalImage from 'react-modal-image';
+
+import AuthContext from '../../context/AuthContext';
+import api from '../../services/api';
 
 function Penilaian() {
+    const { loggedIn } = useContext(AuthContext);
+    const { id } = useParams();
+    const [tugas, setTugas] = useState('');
+    const [error, setError] = useState(true);
+
+    async function getTugas() {
+        try {
+            const res = await api.get(`/tugas/modul/${id}`)
+
+            setTugas(res.data)
+            setError(false)
+            console.log(res.data)
+        } catch (err) {
+            console.log(err)
+            toast.error(err.response?.data?.message || err)
+        }
+    }
+
+    useEffect(() => {
+        getTugas()
+    }, [])
+    
     const rating = [];
     
-    for(var i=0; i<5; i++) {
+    for(var i=0; i<tugas.rating; i++) {
         rating.push(<IoStar style={{ color: '#F76761', marginRight: '0.5rem' }}></IoStar>)
     }
+
+    console.log(tugas)
 
     return ( 
         <React.Fragment>
             <Container>
+            {error===false
+            ?
+            <>
             <Card className="my-5" style={{ width: '100%' }}>
                 <Card.Header as={'h5'} className="p-3" style={{ background: '#F9BD67' }}>Informasi Umum</Card.Header>
                 <Card.Body>
@@ -25,7 +58,7 @@ function Penilaian() {
                                         <h6 className="p-2">Nama</h6>
                                     </Col>
                                     <Col md={8}>
-                                        <h6 className="p-2 isi">Bucky Montana Esmeralda</h6>
+                                        <h6 className="p-2 isi">{loggedIn.data.nama_depan + " " + loggedIn.data.nama_belakang}</h6>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -33,7 +66,7 @@ function Penilaian() {
                                         <h6 className="p-2">Modul</h6>
                                     </Col>
                                     <Col md={8}>
-                                        <h6 className="p-2 isi">Modul 1: Mengenal Body Painting</h6>
+                                        <h6 className="p-2 isi">{tugas.modul.nama_modul}</h6>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -41,7 +74,7 @@ function Penilaian() {
                                         <h6 className="p-2">Tugas</h6>
                                     </Col>
                                     <Col md={8}>
-                                        <h6 className="p-2 isi">Perkenalan Body Painting</h6>
+                                        <h6 className="p-2 isi">{tugas.modul.nama_modul}</h6>
                                     </Col>
                                 </Row>
                         </Col>
@@ -51,7 +84,7 @@ function Penilaian() {
                                         <h6 className="p-2">Bidang</h6>
                                     </Col>
                                     <Col md={8}>
-                                        <h6 className="p-2 isi">Seni Lukis</h6>
+                                        <h6 className="p-2 isi">{loggedIn.data.bidang_seni}</h6>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -59,7 +92,7 @@ function Penilaian() {
                                         <h6 className="p-2">Tanggal Kumpul</h6>
                                     </Col>
                                     <Col md={8}>
-                                        <h6 className="p-2 isi">Senin 6 September 2021</h6>
+                                        <h6 className="p-2 isi">{tugas.tanggal_kumpul}</h6>
                                     </Col>
                                 </Row>
                                 <Row>
@@ -68,8 +101,15 @@ function Penilaian() {
                                     </Col>
                                     <Col md={8}>
                                         <Row md={'auto'} className="row-auto p-0 m-0 gap-2">
+                                            {tugas.status=='Disetujui'
+                                            ?
+                                            <>
                                             <h6 className="p-2 isi" style={{ background: '#439946', color: 'white' }}>Disetujui</h6>
-                                            <h6 className="p-2 isi">Selasa 7 September 2021</h6>
+                                            <h6 className="p-2 isi">{tugas.tanggal_nilai}</h6>
+                                            </>
+                                            :
+                                            <h6 className="p-2 isi" style={{ background: '#dd4949', color: 'white' }}>Belum dinilai</h6>
+                                            }
                                         </Row>
                                     </Col>
                                 </Row>
@@ -83,18 +123,22 @@ function Penilaian() {
                 <Card.Body className="mx-3 px-0">
                     <Row className="p-3 m-0 gap-3 kolom-2 align-items-center" style={{ width: '100%' }}>
                         <Col md={'auto'}>
-                            <h6 className="p-2 m-0">tugas_modul_1.jpg</h6>
+                            <ModalImage small={tugas.file_tugas} medium={tugas.file_tugas} large={tugas.file_tugas} className="porto my-2"/>
                         </Col>
                         <Col className="col-auto justify-content-start button-selengkapnya">
+                            <a href={tugas.file_tugas} target="_blank">
                             <Button type="submit" className="p-1" style={{ background: 'none', border: 'none', boxShadow: 'none' }}>
                                 <FiDownload className="unduh-ikon"/>
                                 UNDUH TUGAS
                             </Button>
+                            </a>
                         </Col>
                     </Row>
                 </Card.Body>
             </Card>
-
+            
+            {tugas.rating
+            ?
             <Card className="mb-5" style={{ width: '100%' }}>
                 <Card.Header as={'h5'} className="p-3" style={{ background: '#F9BD67' }}>Feedback</Card.Header>
                 <Card.Body className="mx-3 px-0">
@@ -112,7 +156,7 @@ function Penilaian() {
                                 <h6 className="p-2">Poin</h6>
                             </Col>
                             <Col md={'auto'}>
-                                <h6 className="p-2 isi">85 Poin</h6>
+                                <h6 className="p-2 isi">{tugas.poin}</h6>
                             </Col>
                         </Row>
                         <Row>
@@ -120,9 +164,7 @@ function Penilaian() {
                                 <h6 className="p-2">Komentar</h6>
                             </Col>
                             <Col md={10}>
-                                <h6 className="p-2 isi">Selamat kamu sudah menyelesaikan Modul I dan dapat melanjutkan ke modul selanjutnya.
-                                Warna yang dipilih bagus dan serasi satu sama lain, namun gambar yang dibuat sedikit patah - patah.
-                                Tetap semangat!</h6>
+                                <h6 className="p-2 isi">{tugas.komentar}</h6>
                             </Col>
                         </Row>
                         <Row>
@@ -130,19 +172,36 @@ function Penilaian() {
                                 <h6 className="p-2">Saran</h6>
                             </Col>
                             <Col md={10}>
-                                <h6 className="p-2 isi">Kamu bisa menggunakan kuas yang lebih kecil agar gambar yang dihasilkan lebih halus.</h6>
+                                <h6 className="p-2 isi">{tugas.saran}</h6>
                             </Col>
                         </Row>
                     </Row>
                     <Row className="mt-3 m-0">
                         <Col className="col-auto justify-content-start button-selengkapnya">
-                            <Link to="" className="p-1 link-selengkapnya" style={{ background: 'none', border: 'none', boxShadow: 'none' }}>
+                            <Link to="/modul" className="p-1 link-selengkapnya" style={{ background: 'none', border: 'none', boxShadow: 'none' }}>
                                 LANJUT BELAJAR
                             </Link>
                         </Col>
                     </Row>
                 </Card.Body>
             </Card>
+            :
+            <Row className="mb-5 m-0">
+                <Col className="col-auto justify-content-start button-selengkapnya">
+                    <Link to="/modul" className="p-1 link-selengkapnya" style={{ background: 'none', border: 'none', boxShadow: 'none' }}>
+                        LANJUT BELAJAR
+                    </Link>
+                </Col>
+            </Row>
+            }
+            </>
+            :
+            <Container className="min-vh-100 d-flex justify-content-center align-items-center flex-column">
+                <img src={loader} alt="loader"style={{  width: '5rem' }}></img>
+                <p className="p-0 m-0">Tunggu sebentar, sedang mengambil data</p>
+            </Container>
+            }
+
             </Container>
         </React.Fragment>
     );

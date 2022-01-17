@@ -3,18 +3,20 @@ import './style.css';
 import { Navbar, Nav, NavDropdown, Container, Button } from "react-bootstrap";
 import { ImArrowRight2 } from 'react-icons/im';
 import { FaHome } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 import AuthContext from '../../context/AuthContext';
 import api from '../../services/api';
 
 function NavigasiBar(){
     const { loggedIn, setLoggedIn } = useContext(AuthContext);
+    const history = useHistory();
 
     function logout() {
         api.post('/auth/logout')
         .then((res) => {
             console.log(res.data)
+            history.push('/')
 
             setLoggedIn({ isLoggedIn: false});
             localStorage.removeItem("token");
@@ -58,18 +60,22 @@ function NavigasiBar(){
                                     <Nav className="d-flex justify-content-center align-items-center">
                                         <img className="navbar-profil" src={loggedIn.data.foto_profil}></img>
                                         <NavDropdown title={loggedIn.data.nama_depan + " " + loggedIn.data.nama_belakang} id="collasible-nav-dropdown" align="end" className="p-0 m-0 ms-2">
-                                            <NavDropdown.Item href="/profile">
+                                            <NavDropdown.Item as={Link} to="/profile">
                                                 Lihat Profil
                                             </NavDropdown.Item>
-                                            <NavDropdown.Item href="/editprofile">
+                                            <NavDropdown.Item as={Link} to="/editprofile">
                                                 Edit Profil
                                             </NavDropdown.Item>
-                                            <NavDropdown.Item href="/portofolio">
+                                            <NavDropdown.Item as={Link} to="/portofolio">
                                                 Portofolio
                                             </NavDropdown.Item>
                                             <NavDropdown.Divider />
+                                            <NavDropdown.Item as={Link} to="/eventpage">
+                                                Event
+                                            </NavDropdown.Item>
+                                            <NavDropdown.Divider />
                                             <NavDropdown.Item>
-                                                <button onClick={logout} style={{ border: 'none', background: 'none' }}>Keluar</button>
+                                                <button onClick={logout} style={{ border: 'none', background: 'none', width: '100%', textAlign: 'left' }}>Keluar</button>
                                             </NavDropdown.Item>
                                         </NavDropdown>
                                     </Nav>

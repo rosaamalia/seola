@@ -1,5 +1,5 @@
 import React, {useState, useContext} from "react";
-import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import './style.css';
 import { Container, Row, Col, Form, Button} from "react-bootstrap";
 import Happy from "../gambarLogin/Happy";
@@ -15,6 +15,8 @@ function FormLogin() {
 
     const [token, setToken] = useState('');
     const { loggedIn, setLoggedIn } = useContext(AuthContext);
+
+    const history = useHistory();
 
     function handleFormSubmit(e){
         e.preventDefault();
@@ -57,7 +59,8 @@ function FormLogin() {
 
                 toast.success('Login berhasil')
                 console.log(loggedIn)
-                window.location.replace('/dashboard')
+
+                history.push('/')
             })
             .catch((err) => {
                 if(err == 'Error: Request failed with status code 404') {
