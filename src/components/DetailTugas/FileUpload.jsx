@@ -45,7 +45,6 @@ function FileUpload() {
         api.put(`/progres/status/${id}`, data)
         .then((res) => {
           console.log('Modul selesai', res.data)
-          setShow(false)
         })
         .catch((err) => {
           console.log(err.response?.data?.message || err)
@@ -53,11 +52,10 @@ function FileUpload() {
         })
 
         toast.success('Tugas berhasil diunggah');
+        setShow(false)
       }).catch((err) => {
         toast.error(err.response?.data?.message || err)
       })
-
-      history.go(0)
     }
   
     return (

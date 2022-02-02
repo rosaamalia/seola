@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+### Build Full-Stack Web App - #Tech4Impact Kelompok 22
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Seola - Serrum Online Learning App
+<img src="https://user-images.githubusercontent.com/68428942/152137510-1cd81f7c-d65a-46c1-aee0-ccff4585a4c5.png" width="600"/>
 
-## Available Scripts
+Front-End: https://seola.netlify.app/
 
-In the project directory, you can run:
+Back-End: https://seola-api.herokuapp.com/
 
-### `npm start`
+Back-End Repository: https://github.com/Tech4Impact-21-22/seola-api
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tentang Seola
+Seola merupakan web yang berisi modul - modul pembelajaran khusus seni modern dan seni kontemporer. Platform ini dibuat khusus untuk menunjang siswa SMA yang tertarik mengenai seni dan dapat memudahkan siswa mengakses modul pembelajaran serta membuat karya di platfrom ini. Di Seola juga membagikan kegiatan kegiatan seperti event menarik dan membagikan kesempatan tersebut kepada peserta Seola yang menyukai seni dan tantangan.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Problem Statement
+* Siswa kesulitan untuk mengeksplor lebih jauh tentang bakat seni mereka
+* Siswa kebingungan bagaimana agar karya yang dibuat dapat dinilai dan diapresiasi
+* Belum adanya platform yang dapat membangkitkan semangat berkompetisi dalam berkarya di bidang seni
+* Siswa membutuhkan  wadah penampung hasil karya seni dan komunitas seni pendukung
 
-### `npm test`
+## Tech Stack
+Frontend:
+* React JS
+* Bootstrap
+* Javascript
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Backend:
+* Node JS
+* Mongoose
+* MongoDB Atlas
 
-### `npm run build`
+## Demo Fitur Website
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://user-images.githubusercontent.com/68428942/152142165-2b9e5e3d-ff61-4b81-8a32-5f21c3827df9.mp4
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏆Demo Day!
+Website SEOLA menempati peringkat 2 pada Skilvul #Tech4Impact Demo Day yang dilaksanakan pada hari Senin, 31 Januari 2021.
 
-### `npm run eject`
+## Kelompok 22
+Mentor: Eddy Permana
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Anggota:
+* Ghina Fairuz Nazilah
+* Riggina Adriani Oceania
+* Rosa Amalia
+* Singgih Pratama
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Website ini belum menyentuh kata sempurna dan masih butuh banyak perbaikan. Kami menerima kritik dan saran untuk pengembangan website ini!✨

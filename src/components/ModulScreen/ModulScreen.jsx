@@ -4,39 +4,7 @@ import { Link } from 'react-router-dom';
 import "./style.css";
 import { toast } from 'react-toastify';
 
-import mentor from "../../images/mentor.svg";
-
-import AuthContext from "../../context/AuthContext";
-import { DetailModulContext } from "../../context/DetailModulContext";
-import api from '../../services/api';
-
-const ModulScreen = () => {
-  const { loggedIn } = useContext(AuthContext);
-  const { modul, setModul }= useContext(DetailModulContext);
-
-  const [kelas, setKelas] = useState('');
-
-  useEffect(() => {
-      api.get(`/kelas/${loggedIn.data.bidang_seni_id}`)
-      .then((res) => {
-          setKelas(res.data)
-          console.log(kelas)
-      })
-      .catch((err) => {
-          toast.error(err)
-      })
-  }, [])
-
-  useEffect(() => {
-    api.get('/modul/progres')
-    .then((res) => {
-        setModul(res.data);
-    })
-    .catch((err) => {
-        console.log(err)
-        toast.error(err)
-    })
-  }, [])
+const ModulScreen = ({modul, kelas}) => {
 
   return (
     <Container className="background-page" fluid>

@@ -12,6 +12,7 @@ import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import { IoStar } from 'react-icons/io5'
 import { DetailModulContext } from '../../context/DetailModulContext'
 import api from '../../services/api';
+import error from '../../services/error';
 
 
 const Tagline = styled.span`
@@ -47,6 +48,7 @@ export const DetailTugas = () => {
             setSemuaModul(res.data);
         })
         .catch((err) => {
+            error.handleError(err.response.status)
             console.log(err)
             toast.error(err)
         })
@@ -69,7 +71,9 @@ export const DetailTugas = () => {
                             marginTop : 20,
                             fontWeight: "bold" 
                         }}>Kriteria</p>
+                        <div style={{ marginRight: 100 }}>
                         <Tekstual isi={modul.modul.tugas}></Tekstual>
+                        </div>
                         <br/>
                         <Tagline>Terus berimajinasi dan berkarya</Tagline>
 
