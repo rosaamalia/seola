@@ -35,7 +35,7 @@ https://user-images.githubusercontent.com/68428942/152142165-2b9e5e3d-ff61-4b81-
 
 
 ## 🏆Demo Day!
-Website SEOLA menempati peringkat 2 pada Skilvul #Tech4Impact Demo Day yang dilaksanakan pada hari Senin, 31 Januari 2021.
+Website SEOLA menempati peringkat 2 pada Skilvul #Tech4Impact Demo Day yang dilaksanakan pada hari Senin, 31 Januari 2022.
 
 ## Kelompok 22
 Mentor: Eddy Permana
